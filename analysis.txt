@@ -1,0 +1,51 @@
+------
+Analýza Návštěvníků:
+1.Člen
+-vstup do členské sekce, na fórum
+2.Potencionální zájemci
+-základní informace o dzogčhenu a transmisi
+-kontakty na centra
+-faq 
+3.Zájemci o tanec a jantru
+-vstup na informace o tanci a jantře, informace o akcích
+4.Návštěvníci jiných projektů
+-informace o jiných projektech
+5.Cizinci
+-informace o akcích v angličtině
+12345.
+-články, data akcí - chce vidět, vždycky bude dobré, ať návštěvníci uvidí, že komunita žije
+------
+Struktura menu:
+Home
+    Články
+    Kalendář akcí
+    Basic english info
+    Pro členy
+    Fórum pro členy 
+Modrá barva
+  Čhogyal Namkhai Norbu
+    Linie mistrů
+    Kalendář
+  Khjentse Ješe
+Červená barva
+  Dzogčhen 
+    Co je to Dzogčhen
+    Jak začít s dzogčhenem?
+    Santi mahá sanga
+    Texty a další informace
+  Tanec Vadžry a Jantrajóga
+    Tanec Vadžry
+    Jantrajóga
+Žlutá barva
+  Dzogčhenová komunita
+    Kontakty
+    Mezinárodní dzogčhenová komunita
+    Informace o členství
+    Phendeling
+    Kunkyabling
+  Spřízněné projekty
+    My reincarnation
+    Losar
+    ASIA
+    Shang Shung
+    Tibetský buddhismus

@@ -1,0 +1,111 @@
+/*
+Theme Name: dzogchen
+Theme URI: http://wordpress.org/
+Description: dzogchen site theme
+Author: Allodium
+Version: 1.0
+*/
+
+@font-face {
+	font-family: 'Sovereign';
+	src: url('./font/sovereign.eot?') format('eot'),
+	/*url('./font/sovereign.woff') format('woff'),*/
+	url('./font/sovereign.ttf') format('truetype');
+	
+	font-family: 'Sovereign Bold';
+	src: url('./font/sovereign.eot?') format('eot'),
+	url('./font/sovereign-bold.ttf') format('truetype');
+}
+
+body{padding:0; margin:0; border: 0;  color: #000;
+	font-family: 'Sovereign', serif;
+	/*font-family: 'Arapey', serif;*/
+}
+a {text-decoration:underline;}
+a{color:#009AEF; }
+p {text-align: justify; margin-top: 0; margin-bottom: 10px;}
+h1 {font-size: 24px; margin-top: 10px; margin-bottom: 15px; color: #000; }
+.postedon {font-size: 0.8em; margin-bottom: 5px;}
+
+#wrapper {min-height: 611px; z-index: 10;}
+
+#main-content {width: 950px; margin-left: auto; margin-right: auto; position: relative; z-index: 2;}
+
+#head-bar{height: 32px; color: #fff; margin-top: 10px;}
+#head-logo{display: block; float: left; width: 669px; height: 32px; background: url("images/dzogchen-je-prirozene-dokonal-stav.png") no-repeat; }
+
+#head-image{height: 350px;}
+#head-image, #front-page-paragraphs{position:relative; left:10px;}
+
+#head-menu {height: 114px; margin-top: 10px; width: 100%; background: url("images/brandbook-header-background.png") no-repeat #FFF;  }
+#head-menu a{ text-decoration: none; color:white; font-size:14px;}
+#head-menu a:hover{ text-decoration: underline;}
+#head-menu ul{list-style-type:none; position:relative;}
+#head-menu ul li{width:93px; position:absolute; top:42px; line-height:14px;}
+#head-menu ul li ul li{display: none; }
+#head-menu ul li.page-item-5 > a{background: url("images/brandbook-dc-logo.png") no-repeat; height:53px; width:260px; display:block; position:absolute; top:-25px; left:-23px; font-size:0px; }
+#head-menu ul li.page-item-9 {left:340px;width:70px;}
+#head-menu ul li.page-item-13 {left:427px;width:70px;}
+#head-menu ul li.page-item-29 {left:525px;}
+#head-menu ul li.page-item-1196 {left:609px;}
+#head-menu ul li.page-item-71 {left:709px;}
+#head-menu ul li.page-item-418 {left:799px;}
+#head-menu ul li.page-item-5 ul{left:337px;}
+#head-menu ul li.page-item-9 ul{left:-150px;}
+#head-menu ul li.page-item-13 ul{left:-237px;}
+#head-menu ul li.page-item-29 ul{left:-335px;}
+#head-menu ul li.page-item-1196 ul{left:-419px;}
+#head-menu ul li.page-item-71 ul{left:-519px;}
+#head-menu ul li.page-item-418 ul{left:-609px;}
+#head-menu ul li.current_page_item{text-decoration:underline; color:white;}
+#head-menu ul li.current_page_item ul.children,
+#head-menu ul li.current_page_parent ul.children
+{ position:absolute; top:52px; width: 700px;}
+#head-menu ul li.current_page_item ul.children li,
+#head-menu ul li.current_page_parent ul.children li
+{display:inline; position:static; width:auto; margin-right:15px;}
+#head-menu ul li.current_page_item ul.children li a,
+#head-menu ul li.current_page_parent ul.children li a
+{color: #111C6C;}
+#head-menu ul li.current_page_parent li.current_page_item a{text-decoration:underline;}
+#head-menu ul ul.children ul.children {display:none;}
+#head-menu ul li.current_page_item ul.children li.page-item-1211,
+#head-menu ul li.current_page_parent ul.children li.page-item-1211{position:absolute; left:-353px; top:0px;}
+.right-box {float: left; width: 280px; height: 550px; padding: 0;  float: left;margin-top: 10px; margin-left: 270px;}
+.right-box-inner { width: 260px; height: 518px; padding: 10px;}
+.right-box p {  text-align: left; }
+
+.right-box h2, .front-col h2 {display: block; width: 275px; margin-left: 10px; padding-left:5px; padding-top:5px; padding-bottom:5px; text-transform: uppercase; font-size: 1.1em; }
+.right-box h3, .front-col h3 { margin: 0; display: block; float: left; font-size: 13px; line-height: 15px;}
+.right-box p, .front-col p { padding-top: 5px; padding-bottom: 5px; }
+.right-box .published, .front-col .published {display: block; float: right; width: 65px; font-size: 13px; border-color: #000; text-align: right; padding-left: 10px; line-height: 15px;}
+
+#right-articles {position:absolute; top:464px; left:386px; padding-right:23px; padding-top: 36px;}
+#right-articles p, .front-col p {margin-top: 0; margin-bottom: 5px; font-size: 11px; padding-top: 5px; padding-bottom: 5px;  width: 100%; line-height: 15px;}
+#right-articles h2{background: url("images/gradient.png") repeat-y #FFF; color:white;}
+
+#article-content p{margin-bottom:15px; margin-top:15px;}
+#article-content{width: 570px; float: left; margin-top: 10px; padding: 10px; font-size:90%; color: #000; padding-right:50px; border-right: 1px solid gray; min-height:700px;}
+#article-content h1 { margin-top: 0; }
+
+#front-page-paragraphs p {margin-top:20px; text-indent:80px;}
+
+#three-columns{}
+#three-columns .front-col{width:300px; float:left;}
+#three-columns ul{list-style-type:none; padding:0px; margin:0px;}
+#three-columns .other{margin-left:10px; padding-left:10px;}
+#three-columns td{height:100%;}
+#front-news{border-top: 6px solid #102269;}
+#front-news p{text-indent:0px;margin-top:0px;}
+#front-events{border-top: 6px solid #ED1C24;}
+#front-places{border-top: 6px solid #FFDE00;}
+#front-places ul li{font-size:13px;font-weight:bold;}
+
+.gce-list { padding: 0; margin: 0;  }
+.gce-list li { padding: 0; margin: 0; list-style-type:none; padding: 5px; font-size: 11px; vertical-align: middle; }
+.gce-list li:nth-child(even) { }
+.gce-list li:nth-child(odd)  { }
+.gce-list-title {display: none;}
+.cal-date { }
+.cal-row {  min-height: 12px; }
+.cal-row2 { min-height: 12px; padding-top: 2px;}
