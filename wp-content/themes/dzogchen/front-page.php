@@ -14,15 +14,39 @@
 
 <?php get_header(); ?>
 <div id="front-page-paragraphs">
-        <?php while (have_posts()) : the_post(); ?>
-
-            <?php the_content(); ?>
-
-        <?php endwhile; // end of the loop.  ?>
-<table id="three-columns">
-<tr><td class="front-col" id="front-news">
+	<div class="rinpoche masters-box">
+		<img src="
+			<?php 
+				$baseUrl = bloginfo('stylesheet_directory');
+				$srcUrl = $baseUrl . "/images/choegyal-namkhai-norbu-rinpoche-first-page.png";
+				echo $srcUrl;
+			?>
+		"/>
+		<div class="filter">
+			<span class="caption"><a href="">Čhogjal Namkhai Norbu</a></span>
+		</div>
+	</div>
+	<div class="paragraphs">
+		<?php while (have_posts()) : the_post(); ?> <?php the_content(); ?> <?php endwhile; // end of the loop.  ?>
+		<div class="filter">
+			<span class="caption"><a href="<?php $permalink = get_permalink(9); ?>"><br/>Co je to Dzogčhen?</a></span>
+		</div>
+	</div>
+	<div class="khyentse masters-box">
+		<img src="
+			<?php 
+				$baseUrl = bloginfo('stylesheet_directory');
+				$srcUrl = $baseUrl . "/images/khyentse-yeshe-namkhai-first-page.png";
+				echo $srcUrl;
+			?>
+		"/>
+		<div class="filter">
+			<span class="caption"><a href="<?php $permalink = get_permalink(13); ?>">Khjence Ješe Namkhai</a></span>
+		</div>
+	</div>
+</div>
+        <?php /*
     <h2>Nejnovější články</h2>
-        <?php
         $recentPosts = new WP_Query();
         $recentPosts->query('showposts=15');
         while ($recentPosts->have_posts()): $recentPosts->the_post();
@@ -32,19 +56,6 @@
             <div style="clear: both;"></div>
             <?php the_excerpt(); ?> 
         <?php endwhile; ?>
-</td>
-<td class="front-col other" id="front-events">
-    <h2>Nejbližší akce v čechách</h2>
-    <?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="10"]'); ?>
-</td>
-<td class="front-col other" id="front-places">
-	<h2>Centra v Česku</h2>
-	<ul>
-		<li><a href="http://phendeling.localhost/">Phendeling</a></li>
-		<li><a href="http://kunkhyabling.localhost/">Kunkhyabling</a></li>
-		<li><a href="http://plzen.localhost/">Plzeň</a></li>
-	</ul>
-</td></tr>
-</table>
+	*/ ?>
 <?php get_footer(); ?>
 

@@ -73,7 +73,7 @@
 		</div>
         </div>
 	<div id="main-image-container">
-		<img id="main-image" src="
+		<img id="main-image" width="960" height="386" src="
 			<?php 
 				$thisID = $post->ID;
 				$parentID = get_page($hierPageID)->post_parent;
