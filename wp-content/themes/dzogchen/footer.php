@@ -11,11 +11,11 @@
  */
 ?>
 	<div style="clear: both;"></div>
-</div><!-- #main-content -->
-
 <div id="footer">
 	<p><span>Dzogčhen o.s. &copy;</span><span class="right"><a href="mailto:dzogchen@dzochen.cz">dzogchen@dzochen.cz</a> Opletalova 35, Praha 2</span></p>	
 </div>
+</div><!-- #main-content -->
+
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
