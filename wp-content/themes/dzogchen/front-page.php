@@ -89,6 +89,9 @@
 		</div>
 	</div>
 </div>
+<div id="footer">
+	
+</div>
         <?php /*
     <h2>Nejnovější články</h2>
         $recentPosts = new WP_Query();
