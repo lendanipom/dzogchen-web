@@ -93,4 +93,5 @@ div#front-articles .community div.content {background-color:rgba(255,239,0,0.05)
 
 
 /* footer */
-div#footer {width:960px; background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 top; padding-top:6px; margin-top:12px;}
+div#footer {width:960px; background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 top; padding-top:6px; margin-top:12px; position: relative;}
+div#footer p span.right{position:absolute; right:0px;}
