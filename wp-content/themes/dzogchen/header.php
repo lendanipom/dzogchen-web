@@ -61,7 +61,7 @@
     <div id="main-content">        
         <div id="head-menu">
 		<div class="topmost-panel">
-			sometext
+			<span style="font-size:500%">wordpress login</span>
 		</div>
 		<div class="mouse-area">
 			<div class="links">
@@ -85,6 +85,6 @@
 				echo $srcUrl;
 			?>
 		"/>
-		<div class="filter"><h1>Tanečníci tance vadžry v komunitním centru Phendeling na Šumavě</h1></div>
+		<div class="filter"><h1><br/>Tanečníci tance vadžry v komunitním centru Phendeling na Šumavě</h1></div>
 	</div>
 

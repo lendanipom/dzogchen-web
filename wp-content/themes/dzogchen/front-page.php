@@ -45,6 +45,50 @@
 		</div>
 	</div>
 </div>
+<div id="front-articles">
+	<div class="small masters">
+		<div class="content">
+			<ul>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+			</ul>
+		</div>
+		<div class="filter">
+			<span><br/>Mistři</span>
+		</div>
+	</div>
+	<div class="small teaching">
+		<div class="content">
+			<ul>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+			</ul>
+		</div>
+		<div class="filter">
+			<span><br/>Nauka a praxe</span>
+		</div>
+	</div>
+	<div class="small community">
+		<div class="content">
+			<ul>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
+			</ul>
+		</div>
+		<div class="filter">
+			<span><br/>Lidé a místa</span>
+		</div>
+	</div>
+	<div class="big">
+		<div class="content">
+			<h2>Nejbližší akce v čechách</h2>
+			<?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="10"]'); ?>
+		</div>
+		<div class="filter">
+			<span><br/>Kalendář české komunity</span>
+		</div>
+	</div>
+</div>
         <?php /*
     <h2>Nejnovější články</h2>
         $recentPosts = new WP_Query();
