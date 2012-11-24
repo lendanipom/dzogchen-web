@@ -89,9 +89,6 @@
 		</div>
 	</div>
 </div>
-<div id="footer">
-	<p><span>Dzogčhen o.s. &copy;</span><span class="right"><a href="mailto:dzogchen@dzochen.cz">dzogchen@dzochen.cz</a> Opletalova 35, Praha 2</span></p>	
-</div>
         <?php /*
     <h2>Nejnovější články</h2>
         $recentPosts = new WP_Query();

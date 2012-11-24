@@ -10,17 +10,12 @@
  * @since Twenty Ten 1.0
  */
 ?>
-<div style="clear: both;"></div>
-<?php /*
-<div id="footer">
-    <div id="footer-c" class="cufoned">Dzogchen o.s. &copy;2011 - Shangshung Institute Italy</div>
-    
-    <div id="footer-address" class="cufoned">Opletalova 35, Praha 2</div>
-    <div id="footer-email" class="cufoned">dzogchen@dzogchen.cz</div>
-</div>
-*/ ?>
-        </div><!-- #main-content -->
+	<div style="clear: both;"></div>
+</div><!-- #main-content -->
 
+<div id="footer">
+	<p><span>Dzogčhen o.s. &copy;</span><span class="right"><a href="mailto:dzogchen@dzochen.cz">dzogchen@dzochen.cz</a> Opletalova 35, Praha 2</span></p>	
+</div>
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
