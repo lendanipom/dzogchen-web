@@ -20,7 +20,6 @@
 </div>
 */ ?>
         </div><!-- #main-content -->
-</div><!-- #wrapper -->
 
 <?php
 	/* Always have wp_footer() just before the closing </body>

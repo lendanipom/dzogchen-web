@@ -17,3 +17,35 @@ table { border-collapse: separate; border-spacing: 0; }
 caption, th, td { text-align: left; font-weight: normal; }
 blockquote:before, blockquote:after, q:before, q:after { content: ""; }
 blockquote, q { quotes: "" ""; }
+
+
+/* general */
+body{padding:0; margin:0; border: 0; color: #000; font-family: "Verdana"; position:relative;}
+div#main-content{ width:960px; margin:0px auto }
+
+
+/* menu - the top gradient three stripes image with rolldown menu */
+div#head-menu {position:relative;}
+div#head-menu div.topmost-panel{ background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 bottom; padding-bottom:6px; }
+div#head-menu div.links{ height:70px ; background-image:url("./images/header-background-logo-gradient-three-colored-stripes-without-text.png"); background-repeat:no-repeat; color:white; position:relative;}
+div#head-menu div.links span{position:absolute; top:27px; font-size:1.5em; }
+div#head-menu div.links span.masters{left:384px; }
+div#head-menu div.links span.teaching{left:576px; }
+div#head-menu div.links span.community{left:768px; }
+div#head-menu div.mouse-area{position:relative;}
+div#head-menu div.menu{position:absolute; top:70px; background-color:grey; width:960px; display:none;}
+div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
+div#head-menu div.menu ul{list-style-type:none;}
+/* hide the top anchors to virtual pages only serving as nodes to the others */
+div#head-menu div.menu ul li a{display:none;}
+/* show the nested anchors to real pages, override the previous rule */
+div#head-menu div.menu ul li ul li a{display:block;}
+div#head-menu div.menu ul li.page-item-5 a{display: block; position:absolute; left: 24px; top:12px;}
+
+/* the longest item, which will probably be community must be non-absolute, so the engine can compute the height of the div */
+/* masters column */
+div#head-menu div.menu ul li.page-item-1324{position:absolute; left: 384px;} 
+/* teaching column */
+div#head-menu div.menu ul li.page-item-1329{position:absolute; left: 576px;} 
+/* community column */
+div#head-menu div.menu ul li.page-item-71{position:relative; left:768px;} 

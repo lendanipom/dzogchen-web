@@ -51,17 +51,24 @@
 	 */
 	wp_head();
 ?>
+<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/script.js"></script>
 
 </head>
 
 <body <?php body_class(); ?>>
-<div id="wrapper" class="hfeed">
-    
     <div id="main-content">        
         <div id="head-menu">
-            <ul>
-                <?php wp_page_menu(); ?>
-            </ul>
+		<div class="topmost-panel">
+			sometext
+		</div>
+		<div class="mouse-area">
+			<div class="links">
+				<span class="masters">Mistři</span>
+				<span class="teaching">Nauka</span>
+				<span class="community">Komunita</span>
+			</div>
+			<?php wp_page_menu(); /* that div has class menu */ ?> 
+		</div>
         </div>
 
 
