@@ -8,7 +8,9 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */
-?><!DOCTYPE html>
+?>
+<?php require_once("mappings.php") ?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -70,5 +72,19 @@
 			<?php wp_page_menu(); /* that div has class menu */ ?> 
 		</div>
         </div>
-
+	<div id="main-image-container">
+		<img id="main-image" src="
+			<?php 
+				$thisID = $post->ID;
+				$parentID = get_page($hierPageID)->post_parent;
+				$pageId = ($parentID == NULL) ? $thisID : $parentID;
+				$mappingObj = $pageMappings[$pageId];
+				$image = $mappingObj->getImage();
+				$baseUrl = bloginfo( 'stylesheet_directory' );
+				$srcUrl = $baseUrl . "/images/" . $image;
+				echo $srcUrl;
+			?>
+		"/>
+		<div class="filter"><h1>Tanečníci tance vadžry v komunitním centru Phendeling na Šumavě</h1></div>
+	</div>
 

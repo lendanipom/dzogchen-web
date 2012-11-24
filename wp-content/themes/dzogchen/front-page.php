@@ -13,19 +13,6 @@
  */ ?>
 
 <?php get_header(); ?>
-<div id="head-image">
-<?php
-	
-    $var = ($_SERVER['HTTP_HOST']);
-	$exploded = explode('.',$var);
-	$nullth = $exploded[0];
-	if($nullth == 'localhost'){
-	 do_action('slideshow_deploy', '1277'); 
-	} else if ($nullth == 'phendeling') {
-	 do_action('slideshow_deploy', '1314'); 
-	}
-?>
-</div>
 <div id="front-page-paragraphs">
         <?php while (have_posts()) : the_post(); ?>
 
@@ -60,3 +47,4 @@
 </td></tr>
 </table>
 <?php get_footer(); ?>
+

@@ -12,24 +12,6 @@
  * @since Twenty Ten 1.0
  */ ?>
 <?php get_header(); ?>
-<div id="head-image">
-<?php 
-	$thisID = $post->ID;
-	$parentID = get_page($hierPageID)->post_parent;
-	$path = "/wp-content/themes/dzogchen/images/header";
-	$image = $path . $thisID . ".jpg";	
-	if(!file_exists(getcwd() . $image)){
-		$image = $path . $parentID . ".jpg";	
-	} 
-	if(!file_exists(getcwd() . $image)){
-?>
-		<?php do_action('slideshow_deploy', '1277'); ?>		
-<?php 
-	} else {
-		echo "<img src=\"$image\"/>";
-	}
-?>
-</div>
 <div id="article-content">
 <?php while (have_posts()) : the_post(); ?>
     <h1><?php the_title(); ?></h1>

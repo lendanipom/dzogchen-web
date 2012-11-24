@@ -313,3 +313,8 @@ if (!function_exists('dzogchen_posted_on')) :
     }
 
 endif;
+
+function test_access() {
+	return "test acces";
+}
+
