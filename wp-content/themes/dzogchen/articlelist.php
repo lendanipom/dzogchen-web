@@ -1,4 +1,4 @@
-<div class="right-box" id="right-articles">
+<div id="right-articles">
     <h2>Nejnovější články</h2>
     <div class="right-box-inner scroll-pane">
         <?php
