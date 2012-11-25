@@ -61,7 +61,7 @@
     <div id="main-content">        
         <div id="head-menu">
 		<div class="topmost-panel">
-			<span style="font-size:500%">wordpress login</span>
+			<?php echo do_shortcode("[lwa]"); ?>
 		</div>
 		<div class="mouse-area">
 			<div class="links">
