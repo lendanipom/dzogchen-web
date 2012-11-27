@@ -65,9 +65,9 @@
 		</div>
 		<div class="mouse-area">
 			<div class="links">
-				<span class="masters">Mistři</span>
-				<span class="teaching">Nauka</span>
-				<span class="community">Komunita</span>
+				<a class="masters" href="<?php get_permalink(1324) ?>">Mistři</a>
+				<a class="teaching" href="<?php get_permalink(1329) ?>">Nauka</a>
+				<a class="community" href="<?php get_permalink(71) ?>">Komunita</a>
 			</div>
 			<?php wp_page_menu(); /* that div has class menu */ ?> 
 		</div>

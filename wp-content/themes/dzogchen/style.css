@@ -29,10 +29,10 @@ div#main-content{ width:960px; margin:0px auto }
 div#head-menu {position:relative;}
 div#head-menu div.topmost-panel{ background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 bottom; padding-bottom:6px; position:relative; height:25px;}
 div#head-menu div.links{ height:70px ; background-image:url("./images/header-background-logo-gradient-three-colored-stripes-without-text.png"); background-repeat:no-repeat; color:white; position:relative;}
-div#head-menu div.links span{position:absolute; top:27px; font-size:1.4em; }
-div#head-menu div.links span.masters{left:384px; }
-div#head-menu div.links span.teaching{left:576px; }
-div#head-menu div.links span.community{left:768px; }
+div#head-menu div.links a{position:absolute; top:27px; font-size:1.4em; color:white; text-decoration:none;}
+div#head-menu div.links a.masters{left:384px; }
+div#head-menu div.links a.teaching{left:576px; }
+div#head-menu div.links a.community{left:768px; }
 div#head-menu div.mouse-area{position:relative;}
 div#head-menu div.menu{position:absolute; top:70px; background-color:grey; width:960px; display:none; z-index:21}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
