@@ -11,7 +11,6 @@
  * @subpackage Twenty_Ten
  * @since Twenty Ten 1.0
  */ ?>
-
 <?php get_header(); ?>
 <div id="front-page-paragraphs">
 	<div class="rinpoche masters-box">
@@ -46,39 +45,49 @@
 	</div>
 </div>
 <div id="front-articles">
-	<div class="small masters">
-		<div class="content">
-			<ul>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-			</ul>
-		</div>
-		<div class="filter">
-			<span><br/>Mistři</span>
-		</div>
-	</div>
-	<div class="small teaching">
-		<div class="content">
-			<ul>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-			</ul>
-		</div>
-		<div class="filter">
-			<span><br/>Nauka a praxe</span>
-		</div>
-	</div>
-	<div class="small community">
-		<div class="content">
-			<ul>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-				<li><a href="#">N.N.R přicestoval na tenerife</a><span>15.4.2013</span></li>
-			</ul>
-		</div>
-		<div class="filter">
-			<span><br/>Lidé a místa</span>
-		</div>
-	</div>
+	<?php 
+		function basic_query_tags(){
+			$current_user = wp_get_current_user();
+			$anonymousUser = ( 0 == $current_user->ID );
+			$tags = ($anonymousUser) ? ("Veřejné+") : ("");
+			return $tags;
+		}
+		function do_query_in_column($num){
+			$params = basic_query_tags();
+			$tag_id = "tag=" . $params . $num;
+			$query = new WP_Query($tag_id);
+			return $query;
+		}
+		function do_posts_in_column($column){
+			?>
+				<?php $query = do_query_in_column($column); while ($query->have_posts()): $query->the_post(); ?>
+				    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				    <span class="published"><?php echo get_the_date('j.n.Y'); ?></span></li>
+				<?php endwhile; ?>
+			<?php
+		}
+	?>
+	<?php 
+		$cols = array(
+			array("class" => "masters", "tag" => "Učitelé", "label" => "Mistři"),
+			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe"),
+			array("class" => "komunita", "tag" => "Komunita", "label" => "Lidé a místa")
+		);
+		for($i = 0; $i < count($cols); ++$i){
+			?>
+			<div class="small <?php echo $cols[$i]['class'] ?>">
+				<div class="content">
+					<ul>
+						<?php echo do_posts_in_column($cols[$i]["tag"]) ?>
+					</ul>
+				</div>
+				<div class="filter">
+					<span><br/> <?php echo $cols[$i]['label'] ?> </span>
+				</div>
+			</div>
+			<?php
+		}
+	?>
 	<div class="big">
 		<div class="content">
 			<h2>Nejbližší akce v čechách</h2>

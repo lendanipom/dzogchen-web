@@ -17,4 +17,5 @@
 		5 => new PageMapping(array("name" => "first-page-main-image")),
 		1324 => new PageMapping(array("name" => "first-page-main-image"))
 	);
+	
 ?>
