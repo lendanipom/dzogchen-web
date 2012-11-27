@@ -71,7 +71,7 @@
 		$cols = array(
 			array("class" => "masters", "tag" => "Učitelé", "label" => "Mistři"),
 			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe"),
-			array("class" => "komunita", "tag" => "Komunita", "label" => "Lidé a místa")
+			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa")
 		);
 		for($i = 0; $i < count($cols); ++$i){
 			?>
