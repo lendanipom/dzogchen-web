@@ -98,11 +98,15 @@ div#footer p span.right{position:absolute; right:0px;}
 
 
 /* article */
-div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px;}
+div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px; line-height:1.25em;}
+div#article-content p {margin-top:1.25em;}
 div#article-content div.postedon{position:absolute; bottom:0px; right:18px;}
 div#article-plus-newest-articles{position:relative;}
+div#article-content div.filter {top:312px; left:0px;}
 
 
 /* newest articles right side pane */
 div#right-articles {width:359px;position:absolute; right:0px; top:0px;}
 div#right-articles h2{font-size:1.4em;background-image:url("./images/dark-blue-to-light-blue-stripe.png"); background-repeat:repeat-y; background-position: left top; color:white; height: 36px; padding-top:12px; padding-left:12px;}
+
+
