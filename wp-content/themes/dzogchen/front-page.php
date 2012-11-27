@@ -26,10 +26,10 @@
 		</div>
 	</div>
 	<div class="paragraphs">
-		<?php while (have_posts()) : the_post(); ?> <?php the_content(); ?> <?php endwhile; // end of the loop.  ?>
-		<div class="filter">
-			<span class="caption"><a href="<?php $permalink = get_permalink(9); ?>"><br/>Co je to Dzogčhen?</a></span>
-		</div>
+		<h2>Co je to Dzogčhen?</h2>
+		<?php while (have_posts()) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; // end of the loop.  ?>
 	</div>
 	<div class="khyentse masters-box">
 		<img src="
