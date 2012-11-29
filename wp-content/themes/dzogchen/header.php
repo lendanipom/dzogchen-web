@@ -73,18 +73,24 @@
 		</div>
         </div>
 	<div id="main-image-container">
+		<?php 
+			$thisID = $post->ID;
+			$parentID = get_page($hierPageID)->post_parent;
+			$pageId = ($parentID == NULL) ? $thisID : $parentID;
+			$mappingObj = $pageMappings[$pageId];
+			$image = $mappingObj->image;
+			if($image != ""){
+		?>
 		<img id="main-image" width="960" height="386" src="
-			<?php 
-				$thisID = $post->ID;
-				$parentID = get_page($hierPageID)->post_parent;
-				$pageId = ($parentID == NULL) ? $thisID : $parentID;
-				$mappingObj = $pageMappings[$pageId];
-				$image = $mappingObj->getImage();
+			<?php
 				$baseUrl = bloginfo( 'stylesheet_directory' );
 				$srcUrl = $baseUrl . "/images/" . $image;
 				echo $srcUrl;
 			?>
 		"/>
+		<?
+			}
+		?>
 		<div class="filter"><h1><br/>Tanečníci tance vadžry v komunitním centru Phendeling na Šumavě</h1></div>
 	</div>
 
