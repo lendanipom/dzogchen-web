@@ -20,7 +20,7 @@ blockquote, q { quotes: "" ""; }
 
 
 /* general */
-body{font-family: "Verdana"; position:relative; color: #152863;}
+body{font-family: "Times New Roman"; position:relative; color: #152863;}
 a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
 
@@ -34,7 +34,7 @@ div#head-menu div.links a.masters{left:384px; }
 div#head-menu div.links a.teaching{left:576px; }
 div#head-menu div.links a.community{left:768px; }
 div#head-menu div.mouse-area{position:relative;}
-div#head-menu div.menu{position:absolute; top:70px; background-color:grey; width:960px; display:none; z-index:21}
+div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; display:none; z-index:21}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
 div#head-menu div.menu ul li {max-width:192px;}
 div#head-menu div.menu ul{list-style-type:none;}
@@ -71,7 +71,8 @@ div#front-page-paragraphs {width:960px; height: 289px; margin-top:12px;}
 div#front-page-paragraphs .masters-box, div#front-page-paragraphs .paragraphs{float:left; position:relative; height:289px;}
 div#front-page-paragraphs .masters-box, { width:192px;}
 div#front-page-paragraphs .paragraphs{width:576px; height: 289px; }
-div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:1.4em; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px;}
+div#front-page-paragraphs .paragraphs a {color:inherit;}
+div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:1.4em; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px; margin-bottom:12px;}
 div#front-page-paragraphs .masters-box div.filter{width:180px;border-left: 12px solid #102269;}
 div#front-page-paragraphs .paragraphs p{ margin-left:12px; margin-bottom:12px; margin-right:12px;}
 
