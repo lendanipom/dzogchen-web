@@ -60,14 +60,8 @@ $filters = array(
     'year_link',
 );
 
-function delete_dot($link){
-	$wOdot = substr($link, 1);
-	return "";
-}
-
 foreach ( $filters as $filter ) {
     add_filter( $filter, 'wp_make_link_relative' );
-    add_filter( $filter, 'delete_dot' );
 }
 
 
