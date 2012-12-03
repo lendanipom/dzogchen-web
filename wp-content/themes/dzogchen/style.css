@@ -72,7 +72,7 @@ div#front-page-paragraphs .masters-box, div#front-page-paragraphs .paragraphs{fl
 div#front-page-paragraphs .masters-box, { width:192px;}
 div#front-page-paragraphs .paragraphs{width:576px; height: 289px; }
 div#front-page-paragraphs .paragraphs a {color:inherit;}
-div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:1.4em; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px; margin-bottom:12px;}
+div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:1.4em; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px; margin-bottom:12px; text-decoration:underline;}
 div#front-page-paragraphs .masters-box div.filter{width:180px;border-left: 12px solid #102269;}
 div#front-page-paragraphs .paragraphs p{ margin-left:12px; margin-bottom:12px; margin-right:12px;}
 
@@ -101,7 +101,7 @@ div#front-articles .big ul li.gce-feed-2 .cal-row2 {color:#00aeef; text-decorati
 
 /* footer */
 div#footer {width:936px; background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 top; padding:12px; margin-top:12px; position: relative; padding-bottom:20px;}
-div#footer p span.right{position:absolute; right:0px;}
+div#footer p span.right{position:absolute; right:0px; padding-right:12px;}
 
 
 /* article */
