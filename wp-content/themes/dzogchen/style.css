@@ -23,6 +23,7 @@ blockquote, q { quotes: "" ""; }
 body{font-family: "Times New Roman"; position:relative; color: #152863; font-size:14px; line-height:18px;}
 a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
+strong{font-weight:bold;}
 
 
 /* menu - the top gradient three stripes image with rolldown menu */
@@ -114,7 +115,7 @@ div#article-content p {margin-bottom:1.25em;}
 div#article-content div.postedon{display:none;}
 div#article-plus-newest-articles{position:relative;}
 div#article-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px;}
-div#article-content strong{font-size:18px; font-weight:bold;}
+div#article-content p.first strong{font-size:18px; font-weight:bold;}
 
 
 /* newest articles right side pane */

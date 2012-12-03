@@ -44,25 +44,31 @@
  * is designed for, generally via the style.css stylesheet.
  */
 
-/** make urls relative because of switching between phendeling.dzogchen to kunkhyabling.dzogchen for example */
-    $filters = array(
-    'post_link', // Normal post link
-    'post_type_link', // Custom post type link
-    'page_link', // Page link
+$filters = array(
+    'post_link',       // Normal post link
+    'post_type_link',  // Custom post type link
+    'page_link',       // Page link
     'attachment_link', // Attachment link
-    'get_shortlink', // Shortlink
-    'post_type_archive_link', // Post type archive link
-    'get_pagenum_link', // Paginated link
+    'get_shortlink',   // Shortlink
+    'post_type_archive_link',    // Post type archive link
+    'get_pagenum_link',          // Paginated link
     'get_comments_pagenum_link', // Paginated comment link
-    'term_link', // Term link, including category, tag
+    'term_link',   // Term link, including category, tag
     'search_link', // Search link
-    'day_link', // Date archive link
+    'day_link',   // Date archive link
     'month_link',
     'year_link',
-    );
-    foreach ( $filters as $filter ) {
+);
+
+function delete_dot($link){
+	$wOdot = substr($link, 1);
+	return "";
+}
+
+foreach ( $filters as $filter ) {
     add_filter( $filter, 'wp_make_link_relative' );
-    }
+    add_filter( $filter, 'delete_dot' );
+}
 
 
 /** Tell WordPress to run dzogchen_setup() when the 'after_setup_theme' hook is run. */
