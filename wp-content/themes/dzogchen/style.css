@@ -20,7 +20,7 @@ blockquote, q { quotes: "" ""; }
 
 
 /* general */
-body{font-family: "Times New Roman"; position:relative; color: #152863;}
+body{font-family: "Times New Roman"; position:relative; color: #152863; font-size:14px; line-height:18px;}
 a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
 
@@ -29,10 +29,11 @@ div#main-content{ width:960px; margin:0px auto }
 div#head-menu {position:relative;}
 div#head-menu div.topmost-panel{ background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 bottom; padding-bottom:6px; position:relative; height:25px;}
 div#head-menu div.links{ height:70px ; background-image:url("./images/header-background-logo-gradient-three-colored-stripes-without-text.png"); background-repeat:no-repeat; color:white; position:relative;}
-div#head-menu div.links a{position:absolute; top:27px; font-size:1.4em; color:white; text-decoration:none;}
-div#head-menu div.links a.masters{left:384px; }
-div#head-menu div.links a.teaching{left:576px; }
-div#head-menu div.links a.community{left:768px; }
+div#head-menu div.links *{position:absolute; top:27px; font-size:24px; color:white; text-decoration:none;}
+div#head-menu div.links .masters{left:384px; }
+div#head-menu div.links .teaching{left:576px; }
+div#head-menu div.links .community{left:768px; }
+div#head-menu div.links .home{left:19px; width:300px; top:0px; height:70px; display:block;}
 div#head-menu div.mouse-area{position:relative;}
 div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; display:none; z-index:21}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
@@ -41,7 +42,7 @@ div#head-menu div.menu ul{list-style-type:none;}
 /* hide the top anchors to virtual pages only serving as nodes to the others */
 div#head-menu div.menu ul li a{display:none;}
 /* show the nested anchors to real pages, override the previous rule */
-div#head-menu div.menu ul li ul li a{display:block;color:#152863;}
+div#head-menu div.menu ul li ul li a{display:block;color:#152863; margin-top:2px;}
 div#head-menu div.menu ul li.page-item-5 a{display: block; position:absolute; left: 24px; top:12px;color:#152863;}
 
 /* the longest item, which will probably be community must be non-absolute, so the engine can compute the height of the div */
@@ -54,9 +55,10 @@ div#head-menu div.menu ul li.page-item-71{position:relative; left:768px;}
 
 
 /* transparency stripe */
-div.filter{height:72px;background-color:rgba(255,255,255,0.5); position:absolute; bottom:0px; left:0px; z-index:20; font-size:1.4em; }
+div.filter{height:72px;background-color:rgba(255,255,255,0.5); position:absolute; bottom:0px; left:0px; z-index:20; font-size:24px; }
 div.filter a{color:#152863;}
 div.filter span,div.filter h1 {margin:12px; display:block;}
+div.filter span{line-height:24px; }
 
 
 /* main, biggest image in the page */
@@ -69,10 +71,10 @@ div#main-image-container div.filter h1{position:relative;}
 /* front-page paragraphs and pictures of masters */
 div#front-page-paragraphs {width:960px; height: 289px; margin-top:12px;}
 div#front-page-paragraphs .masters-box, div#front-page-paragraphs .paragraphs{float:left; position:relative; height:289px;}
-div#front-page-paragraphs .masters-box, { width:192px;}
+div#front-page-paragraphs .masters-box { width:192px;}
 div#front-page-paragraphs .paragraphs{width:576px; height: 289px; }
 div#front-page-paragraphs .paragraphs a {color:inherit;}
-div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:1.4em; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px; margin-bottom:12px; text-decoration:underline;}
+div#front-page-paragraphs .paragraphs h2{width:542px; height: 26px; background-image:url("./images/front-page-center-gradient-stripe.png"); background-repeat: repeat-y; font-size:24px; margin-left:12px; margin-right:12px; color:white; padding-top:10px; padding-left:10px; margin-bottom:12px; text-decoration:underline;}
 div#front-page-paragraphs .masters-box div.filter{width:180px;border-left: 12px solid #102269;}
 div#front-page-paragraphs .paragraphs p{ margin-left:12px; margin-bottom:12px; margin-right:12px;}
 
@@ -81,7 +83,10 @@ div#front-page-paragraphs .paragraphs p{ margin-left:12px; margin-bottom:12px; m
 div#front-articles {margin-top:12px; height:324px;}
 div#front-articles .content{padding:12px; height:300px;}
 div#front-articles .small, div#front-articles .big{float:left; position:relative;}
+div#front-articles .small a, div#front-articles .big a{font-size:16px;}
 div#front-articles .small {width:192px; margin-right:12px;}
+div#front-articles .small li{margin-bottom:12px;}
+div#front-articles .small .content span{display:block;margin-top:2px;}
 div#front-articles .big {width:336px; }
 div#front-articles div.filter{width:180px;}
 div#front-articles .masters div.filter {border-left: 12px solid #102269; background-color:rgba(16,36,105,0.20);}
@@ -96,7 +101,6 @@ div#front-articles .community div.content {background-color:rgba(255,239,0,0.05)
 /* google calendar events, fourth column */
 div#front-articles .big ul li.gce-feed-2 {margin-bottom:12px;}
 div#front-articles .big ul li.gce-feed-2 .gce-list-title {display:none;}
-div#front-articles .big ul li.gce-feed-2 .cal-row2 {color:#00aeef; text-decoration:underline;}
 
 
 /* footer */
@@ -105,17 +109,18 @@ div#footer p span.right{position:absolute; right:0px; padding-right:12px;}
 
 
 /* article */
-div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px; line-height:1.25em; min-height:500px;}
-div#article-content p {margin-top:1.25em;}
-div#article-content div.postedon{position:absolute; bottom:0px; right:18px;}
+div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px; line-height:16px; min-height:500px;}
+div#article-content p {margin-bottom:1.25em;}
+div#article-content div.postedon{display:none;}
 div#article-plus-newest-articles{position:relative;}
-div#article-content div.filter {top:312px; left:0px; width:564px; border-left: 12px solid #102269; bottom:5px;}
-div#article-content div.filter h1{position:relative; bottom:-22px;}
-div#article-content strong{font-size:1.1em; font-weight:bold;}
+div#article-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px;}
+div#article-content strong{font-size:18px; font-weight:bold;}
 
 
 /* newest articles right side pane */
-div#right-articles {width:359px;position:absolute; right:0px; top:0px;}
-div#right-articles h2{font-size:1.4em;background-image:url("./images/dark-blue-to-light-blue-stripe.png"); background-repeat:repeat-y; background-position: left top; color:white; height: 36px; padding-top:12px; padding-left:12px;}
+div#right-articles {width:362px;position:absolute; right:0px; top:0px;}
+div#right-articles a{font-size:16px;}
+div#right-articles li{margin-top:12px;}
+div#right-articles h2{font-size:24px;background-image:url("./images/dark-blue-to-light-blue-stripe.png"); background-repeat:repeat-y; background-position: left top; color:white; height: 36px; padding-top:12px; padding-left:12px; background-size: 100% auto;}
 
 

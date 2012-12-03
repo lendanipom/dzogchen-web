@@ -22,11 +22,11 @@
 			?>
 		"/>
 		<div class="filter">
-			<span class="caption"><a href="">Čhogjal Namkhai Norbu</a></span>
+			<span class="caption"><a href="<?php echo get_permalink(9); ?>">Čhogjal Namkhai Norbu</a></span>
 		</div>
 	</div>
 	<div class="paragraphs">
-		<h2>Co je to Dzogčhen?</h2>
+		<h2><a href="<?php echo get_permalink(315) ?>"/>Co je to Dzogčhen?</a></h2>
 		<?php while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>
 		<?php endwhile; // end of the loop.  ?>
@@ -40,7 +40,7 @@
 			?>
 		"/>
 		<div class="filter">
-			<span class="caption"><a href="<?php $permalink = get_permalink(13); ?>">Khjence Ješe Namkhai</a></span>
+			<span class="caption"><a href="<?php echo get_permalink(13); ?>">Khjence Ješe Namkhai</a></span>
 		</div>
 	</div>
 </div>
@@ -69,7 +69,7 @@
 	?>
 	<?php 
 		$cols = array(
-			array("class" => "masters", "tag" => "Učitelé", "label" => "Mistři"),
+			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé"),
 			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe"),
 			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa")
 		);

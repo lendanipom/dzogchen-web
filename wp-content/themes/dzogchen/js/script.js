@@ -29,11 +29,6 @@ var dzogchen = (function($){
 		}).mouseleave(function(){
 			dzogchen.setMenuOpen(false);
 		});
-		// hack, wrap <h1/> in article to in background opacity filter
-		var header1 = $("div#article-content > h1");
-		var wrappedHeader = header1.wrap(function(){
-			return "<div class=\"filter\" id=\"axcf\" />" + $(this).text() + "</div>";
-		});
 	});
 	return dzogchen;
 }(jQuery));

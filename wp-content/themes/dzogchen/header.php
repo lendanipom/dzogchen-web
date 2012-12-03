@@ -65,9 +65,10 @@
 		</div>
 		<div class="mouse-area">
 			<div class="links">
-				<a class="masters" href="<?php echo get_permalink(1324) ?>">Mistři</a>
-				<a class="teaching" href="<?php echo get_permalink(1329) ?>">Nauka</a>
-				<a class="community" href="<?php echo get_permalink(71) ?>">Komunita</a>
+				<a href="<?php echo get_permalink(5) ?>"  class="home"></a>
+				<span class="masters">Učitelé</span>
+				<span class="teaching">Nauka</span>
+				<span class="community">Komunita</span>
 			</div>
 			<?php wp_page_menu(); /* that div has class menu */ ?> 
 		</div>
@@ -91,6 +92,6 @@
 		<?
 			}
 		?>
-		<div class="filter"><h1><br/>Tanečníci tance vadžry v komunitním centru Phendeling na Šumavě</h1></div>
+		<div class="filter"></div>
 	</div>
 
