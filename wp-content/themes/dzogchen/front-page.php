@@ -90,8 +90,7 @@
 	?>
 	<div class="big">
 		<div class="content">
-			<h2>Nejbližší akce v čechách</h2>
-			<?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="10"]'); ?>
+			<?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="5"]'); ?>
 		</div>
 		<div class="filter">
 			<span><br/>Kalendář české komunity</span>

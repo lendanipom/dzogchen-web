@@ -92,6 +92,12 @@ div#front-articles .teaching div.content {background-color:rgba(239,28,36,0.05);
 div#front-articles .community div.content {background-color:rgba(255,239,0,0.05);}
 
 
+/* google calendar events, fourth column */
+div#front-articles .big ul li.gce-feed-2 {margin-bottom:12px;}
+div#front-articles .big ul li.gce-feed-2 .gce-list-title {display:none;}
+div#front-articles .big ul li.gce-feed-2 .cal-row2 {color:#00aeef; text-decoration:underline;}
+
+
 /* footer */
 div#footer {width:936px; background-image:url("./images/blue-red-yellow-stripe.png"); background-repeat:repeat-x; background-position: 0 top; padding:12px; margin-top:12px; position: relative; padding-bottom:20px;}
 div#footer p span.right{position:absolute; right:0px;}
