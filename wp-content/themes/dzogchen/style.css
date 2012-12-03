@@ -109,7 +109,9 @@ div#article-content {width:576px; background-image:url("./images/blue-red-yellow
 div#article-content p {margin-top:1.25em;}
 div#article-content div.postedon{position:absolute; bottom:0px; right:18px;}
 div#article-plus-newest-articles{position:relative;}
-div#article-content div.filter {top:312px; left:0px;}
+div#article-content div.filter {top:312px; left:0px; width:564px; border-left: 12px solid #102269; bottom:5px;}
+div#article-content div.filter h1{position:relative; bottom:-22px;}
+div#article-content strong{font-size:1.1em; font-weight:bold;}
 
 
 /* newest articles right side pane */
