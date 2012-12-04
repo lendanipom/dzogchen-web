@@ -114,7 +114,9 @@ div#article-content {width:576px; background-image:url("./images/blue-red-yellow
 div#article-content p {margin-bottom:1.25em;}
 div#article-plus-newest-articles{position:relative;}
 div#article-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px;}
-div#article-content.post > p{font-size:18px; font-weight:bold;}
+div#article-content.post p.perex{font-size:18px; font-weight:bold;}
+div#article-content.post .postedon{text-align:right;}
+div#article-content.post span, div#article-content.post a{display:block;}
 
 
 /* newest articles right side pane */

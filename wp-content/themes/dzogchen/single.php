@@ -19,7 +19,8 @@
 			<?php the_content(); ?>
 		<?php endwhile; ?>
 		<div class="postedon">
-			<?php dzogchen_posted_on(); ?>, autor: <?php the_author(); ?>
+			<?php the_author_posts_link(); ?>
+			<span class="date"><?php dzogchen_posted_on(); ?></span>
 		</div>
 	</div>
 	<?php get_template_part( "articlelist" ) ?> 
