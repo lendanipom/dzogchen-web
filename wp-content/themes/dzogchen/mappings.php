@@ -13,6 +13,11 @@
 			return $this->image;
 		}	
 	}
+	$tagMappings = array(
+		36 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),
+		37 => new PageMapping(array("name" => "teaching", "suffix" => "jpg")),
+		38 => new PageMapping(array("name" => "community", "suffix" => "jpg"))
+	);
 	$pageMappings = array(
 		// in edit of pages in wp-admin, there is the ID of the page in href, so one can find the id there.
 		5 => new PageMapping(array("name" => "first-page-main-image")),

@@ -65,7 +65,7 @@
 		</div>
 		<div class="mouse-area">
 			<div class="links">
-				<a href="<?php echo get_permalink(5) ?>"  class="home"></a>
+				<a href="<?php echo get_permalink(5) ?>" class="home"></a>
 				<span class="masters">Učitelé</span>
 				<span class="teaching">Nauka</span>
 				<span class="community">Komunita</span>
@@ -75,11 +75,22 @@
         </div>
 	<div id="main-image-container">
 		<?php 
-			$thisID = $post->ID;
-			$parentID = get_page($hierPageID)->post_parent;
-			$pageId = ($parentID == NULL) ? $thisID : $parentID;
-			$mappingObj = $pageMappings[$pageId];
-			$image = $mappingObj->image;
+			if($post->post_type == "post"){
+				$post_tag_ids = wp_get_post_tags($post->ID, array("fields" => "ids"));
+				foreach($post_tag_ids as &$post_tag_id){
+					$mapping = $tagMappings[$post_tag_id];
+					if($mapping != NULL){
+						$image = $mapping->image;
+						break;	
+					}
+				}
+			} else {
+				$thisID = $post->ID;
+				$parentID = get_page($hierPageID)->post_parent;
+				$pageId = ($parentID == NULL) ? $thisID : $parentID;
+				$mappingObj = $pageMappings[$pageId];
+				$image = $mappingObj->image;
+			}
 			if($image != ""){
 		?>
 		<img id="main-image" width="960" height="386" src="

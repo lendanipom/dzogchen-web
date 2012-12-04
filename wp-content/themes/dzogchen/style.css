@@ -47,10 +47,12 @@ div#head-menu div.menu ul li ul li a{display:block;color:#152863; margin-top:2px
 div#head-menu div.menu ul li.page-item-5 a{display: block; position:absolute; left: 24px; top:12px;color:#152863;}
 
 /* the longest item, which will probably be community must be non-absolute, so the engine can compute the height of the div */
+/* for member column */
+div#head-menu div.menu ul li.page-item-409{position:absolute; left:192px; top:0px;} 
 /* masters column */
-div#head-menu div.menu ul li.page-item-1324{position:absolute; left: 384px;} 
+div#head-menu div.menu ul li.page-item-1324{position:absolute; left:384px;} 
 /* teaching column */
-div#head-menu div.menu ul li.page-item-1329{position:absolute; left: 576px;} 
+div#head-menu div.menu ul li.page-item-1329{position:absolute; left:576px;} 
 /* community column */
 div#head-menu div.menu ul li.page-item-71{position:relative; left:768px;} 
 
@@ -115,8 +117,9 @@ div#article-content p {margin-bottom:1.25em;}
 div#article-plus-newest-articles{position:relative;}
 div#article-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px;}
 div#article-content.post p.perex{font-size:18px; font-weight:bold;}
-div#article-content.post .postedon{text-align:right;}
-div#article-content.post span, div#article-content.post a{display:block;}
+div#article-content.post .postedon{text-align:right; margin-right:12px;}
+div#article-content.post .postedon span, div#article-content.post .postedon a{display:block;}
+div#article-content.post .postedon a{font-size:16px; margin-bottom:2px;}
 
 
 /* newest articles right side pane */

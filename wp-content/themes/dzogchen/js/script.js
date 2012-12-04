@@ -29,6 +29,7 @@ var dzogchen = (function($){
 		}).mouseleave(function(){
 			dzogchen.setMenuOpen(false);
 		});
+		$("div#article-content.post p").eq(0).addClass("perex");
 	});
 	return dzogchen;
 }(jQuery));
