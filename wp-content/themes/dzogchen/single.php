@@ -13,11 +13,14 @@
  */ ?>
 <?php get_header(); ?>
 <div id="article-plus-newest-articles">
-	<div id="article-content">
-	<?php while (have_posts()) : the_post(); ?>
-	    <h1><?php the_title(); ?></h1>
-	    <?php the_content(); ?>
-	<?php endwhile; // end of the loop.   ?>
+	<div id="article-content" class="post">
+		<?php while (have_posts()) : the_post(); ?>
+			<h1><?php the_title(); ?></h1>
+			<?php the_content(); ?>
+		<?php endwhile; ?>
+		<div class="postedon">
+			<?php dzogchen_posted_on(); ?>, autor: <?php the_author(); ?>
+		</div>
 	</div>
 	<?php get_template_part( "articlelist" ) ?> 
 </div>

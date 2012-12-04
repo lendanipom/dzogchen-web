@@ -29,7 +29,6 @@ var dzogchen = (function($){
 		}).mouseleave(function(){
 			dzogchen.setMenuOpen(false);
 		});
-		$("#article-content p").eq(0).addClass("first");
 	});
 	return dzogchen;
 }(jQuery));
