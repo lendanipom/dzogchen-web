@@ -19,7 +19,7 @@
 			<?php the_content(); ?>
 		<?php endwhile; ?>
 		<div class="postedon">
-			<?php the_author_posts_link(); ?>
+			<?php the_author(); ?>
 			<span class="date"><?php dzogchen_posted_on(); ?></span>
 		</div>
 	</div>
