@@ -49,7 +49,7 @@
 		function do_posts_in_column($column){
 	?>
 			<?php 
-				$query = array("tag_id" => $column, "suppress_filters" => false);
+				$query = array("tag_id" => $column, "suppress_filters" => false,"post__in" => get_option("sticky_posts"));
 				$res = get_posts($query);
 				foreach($res as $post) :
 			?>
