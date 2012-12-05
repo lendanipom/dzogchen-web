@@ -7,11 +7,15 @@
 		public function PageMapping($data){
 			$suffix = ($data["suffix"] != NULL) ? $data["suffix"] : "png";	
 			$name = $data["name"];
+			$this->class = $name;
 			$this->image = $name . "." . $suffix;
 		}
 		public function getImage(){
 			return $this->image;
 		}	
+		public function getClass(){
+			return $this->class;
+		}
 	}
 	$tagMappings = array(
 		36 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),

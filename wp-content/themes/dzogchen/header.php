@@ -90,6 +90,7 @@
 				$pageId = ($parentID == NULL) ? $thisID : $parentID;
 				$mappingObj = $pageMappings[$pageId];
 				$image = $mappingObj->image;
+				$mapping = $mappingObj;
 			}
 			if($image != ""){
 		?>
@@ -103,6 +104,6 @@
 		<?
 			}
 		?>
-		<div class="filter"></div>
+		<div class="filter <?php echo $mapping->getClass(); ?>"></div>
 	</div>
 

@@ -62,12 +62,16 @@ div.filter{height:72px;background-color:rgba(255,255,255,0.5); position:absolute
 div.filter a{color:#152863;}
 div.filter span,div.filter h1 {margin:12px; display:block;}
 div.filter span{line-height:24px; }
+div.filter.masters{border-left-color:#102269;}
+div.filter.teaching{border-left-color:#ED1C24;}
+div.filter.community{border-left-color:#FFDE00;}
+div.filter.masters, div.filter.teaching, div.filter.community{border-left-style:solid; border-left-width:12px;}
 
 
 /* main, biggest image in the page */
 img#main-image { margin-top:12px; }
 div#main-image-container {position:relative; height:398px;}
-div#main-image-container div.filter{width:960px; padding-left:24px; margin-top:30px;}
+div#main-image-container div.filter{width:924px; padding-left:24px; margin-top:30px;}
 div#main-image-container div.filter h1{position:relative;}
 
 
