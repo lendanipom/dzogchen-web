@@ -46,15 +46,8 @@
 </div>
 <div id="front-articles">
 	<?php 
-		function basic_query_tags(){
-			$current_user = wp_get_current_user();
-			$anonymousUser = ( 0 == $current_user->ID );
-			$tags = ($anonymousUser) ? ("Veřejné+") : ("");
-			return $tags;
-		}
 		function do_query_in_column($num){
-			$params = basic_query_tags();
-			$tag_id = "tag=" . $params . $num;
+			$tag_id = "tag=" . $num;
 			$query = new WP_Query($tag_id);
 			return $query;
 		}
@@ -97,17 +90,5 @@
 		</div>
 	</div>
 </div>
-        <?php /*
-    <h2>Nejnovější články</h2>
-        $recentPosts = new WP_Query();
-        $recentPosts->query('showposts=15');
-        while ($recentPosts->have_posts()): $recentPosts->the_post();
-            ?>
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <span class="published"><?php echo get_the_date('j.n.Y'); ?></span>
-            <div style="clear: both;"></div>
-            <?php the_excerpt(); ?> 
-        <?php endwhile; ?>
-	*/ ?>
 <?php get_footer(); ?>
 
