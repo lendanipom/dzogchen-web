@@ -146,13 +146,6 @@ if (!function_exists('dzogchen_setup')):
         //    'primary' => __('Hlavní navigace', 'dzogchen'),
         //));
         
-        wp_enqueue_script('swfobject', get_bloginfo('template_directory') . '/js/swfobject.js');
-        wp_enqueue_script('mousewheel', get_bloginfo('template_directory') . '/js/jquery.mousewheel.js', array('jquery'), '1.0');
-        wp_enqueue_script('jscrollpane', get_bloginfo('template_directory') . '/js/jquery.jscrollpane.min.js', array('jquery'), '1.0');
-        wp_enqueue_script('cufon', get_bloginfo('template_directory') . '/js/cufon-yui.js', array('jquery'), '1.0');
-        wp_enqueue_script('cufon_font', get_bloginfo('template_directory') . '/js/StoneInformalItc_400-StoneInformalItc_500.font.js', array('jquery'), '1.0');        
-        wp_enqueue_script('application', get_bloginfo('template_directory') . '/js/application.js', array('jquery'), '1.0');
-        
         add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
 
         function my_deregister_styles() {
