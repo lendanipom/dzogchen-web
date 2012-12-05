@@ -46,32 +46,33 @@
 </div>
 <div id="front-articles">
 	<?php 
-		function do_query_in_column($num){
-			$tag_id = "tag=" . $num;
-			$query = new WP_Query($tag_id);
-			return $query;
-		}
 		function do_posts_in_column($column){
+	?>
+			<?php 
+				$query = array("tag_id" => $column, "suppress_filters" => false);
+				$res = get_posts($query);
+				foreach($res as $post) :
 			?>
-				<?php $query = do_query_in_column($column); while ($query->have_posts()): $query->the_post(); ?>
-				    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				    <span class="published"><?php echo get_the_date('j.n.Y'); ?></span></li>
-				<?php endwhile; ?>
-			<?php
+			    <li><a href="<?php echo get_permalink($post->ID); ?>"><?php echo get_the_title($post->ID); ?></a>
+			    <span class="published"><?php echo get_the_time('j.n.Y', $post); ?></span></li>
+			<?php 
+				endforeach; 
+			?>
+	<?php
 		}
 	?>
 	<?php 
 		$cols = array(
-			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé"),
-			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe"),
-			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa")
+			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé", "tag_id" => 36),
+			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe", "tag_id" => 37),
+			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa", "tag_id" => 38)
 		);
 		for($i = 0; $i < count($cols); ++$i){
 			?>
 			<div class="small <?php echo $cols[$i]['class'] ?>">
 				<div class="content">
 					<ul>
-						<?php echo do_posts_in_column($cols[$i]["tag"]) ?>
+						<?php echo do_posts_in_column($cols[$i]["tag_id"]) ?>
 					</ul>
 				</div>
 				<div class="filter">

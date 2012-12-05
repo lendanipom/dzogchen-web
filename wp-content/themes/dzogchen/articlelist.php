@@ -1,17 +1,50 @@
 <div id="right-articles">
-	<h2>Nejnovější články</h2>
+		<?php
+			if($post->post_type == "page"){
+				$args = array(
+					"category" => $catId
+				);
+			} else if($post->post_type == "post"){
+				$tags = wp_get_post_tags($post->ID, array('fields' => 'ids'));
+				$args = array(
+					"tag__in" => $tags
+				);
+			} else {
+				die();
+			}
+		?>
+	<h2>Související články</h2>
 	<ul>
 		<?php
-			$recentPosts = new WP_Query();
-			$recentPosts->query('showposts=5');
-			while ($recentPosts->have_posts()): $recentPosts->the_post();
+			$name = $post->post_name;
+			$catId = get_cat_ID($name);
+			$args["showposts"] = 5;
+			$args["post__not_in"] = array($post->ID);
+			$relatedPosts = get_posts($args);
+			foreach($relatedPosts as $post) :
 		?>
 		<li>
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			<span class="published"><?php echo get_the_date('j.n.Y'); ?></span>
 		</li>
 		<?php 
-			endwhile; 
+			endforeach; 
+		?>
+	</ul>
+	<h2>Nejnovější články</h2>
+	<ul>
+		<?php
+			$argsNewest["showposts"] = 5;
+			$argsNewest["post__not_in"] = array($post->ID);
+			$newest = get_posts($argsNewest);
+			foreach($newest as $post) :
+		?>
+		<li>
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<span class="published"><?php echo get_the_date('j.n.Y'); ?></span>
+		</li>
+		<?php 
+			endforeach; 
 		?>
 	</ul>
 </div>
