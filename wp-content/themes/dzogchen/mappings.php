@@ -29,5 +29,4 @@
 		71 => new PageMapping(array("name" => "community", "suffix" => "jpg")),
 		1329 => new PageMapping(array("name" => "teaching", "suffix" => "jpg"))
 	);
-	
 ?>

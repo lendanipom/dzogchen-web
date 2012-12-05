@@ -129,7 +129,7 @@ div#article-content.post .postedon a{font-size:16px; margin-bottom:2px;}
 /* newest articles right side pane */
 div#right-articles {width:362px;position:absolute; right:0px; top:0px;}
 div#right-articles a{font-size:16px;}
-div#right-articles ul{margin-left:12px;}
+div#right-articles ul{margin-left:12px; margin-bottom:12px;}
 div#right-articles li{margin-top:12px;}
 div#right-articles h2{font-size:24px;background-image:url("./images/dark-blue-to-light-blue-stripe.png"); background-repeat:repeat-y; background-position: left top; color:white; height: 22px; padding-top:8px; padding-bottom:6px; padding-left:12px; background-size: 100% auto;}
 

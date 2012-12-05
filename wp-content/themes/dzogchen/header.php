@@ -36,7 +36,6 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/fonts/l10646-webfont.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
@@ -80,7 +79,7 @@
 				foreach($post_tag_ids as &$post_tag_id){
 					$mapping = $tagMappings[$post_tag_id];
 					if($mapping != NULL){
-						$image = $mapping->image;
+						$image = $mapping->getImage();
 						break;	
 					}
 				}
@@ -89,7 +88,7 @@
 				$parentID = get_page($hierPageID)->post_parent;
 				$pageId = ($parentID == NULL) ? $thisID : $parentID;
 				$mappingObj = $pageMappings[$pageId];
-				$image = $mappingObj->image;
+				$image = $mappingObj->getImage();
 				$mapping = $mappingObj;
 			}
 			if($image != ""){
