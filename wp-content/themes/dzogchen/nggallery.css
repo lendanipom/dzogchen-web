@@ -135,17 +135,14 @@ html>body .ngg-album {
 
 .ngg-gallery-thumbnail {
 	float: left;
-	margin-right: 5px;
 	text-align: center;
 }
 
 .ngg-gallery-thumbnail img {
 	background-color:#FFFFFF;
-	border:1px solid #A9A9A9;
 	display:block;  
-	margin:4px 0px 4px 5px;
-	padding:4px;
 	position:relative;
+	margin:12px;
 }
 
 .ngg-gallery-thumbnail img:hover {
