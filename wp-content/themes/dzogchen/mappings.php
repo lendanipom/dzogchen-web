@@ -7,7 +7,7 @@
 		public function PageMapping($data){
 			$suffix = ($data["suffix"] != NULL) ? $data["suffix"] : "png";	
 			$name = $data["name"];
-			$this->class = $name;
+			$this->class = ($data["class"] != NULL) ? $data["class"] : $name;
 			$this->image = $name . "." . $suffix;
 		}
 		public function getImage(){
@@ -27,6 +27,9 @@
 		5 => new PageMapping(array("name" => "first-page-main-image")),
 		1324 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),
 		71 => new PageMapping(array("name" => "community", "suffix" => "jpg")),
-		1329 => new PageMapping(array("name" => "teaching", "suffix" => "jpg"))
+		1329 => new PageMapping(array("name" => "teaching", "suffix" => "jpg")),
+		1372 => new PageMapping(array("name" => "kunkyabling", "suffix" => "jpg", "class" => "community")),
+		89 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "class" => "community")),
+		13 => new PageMapping(array("name" => "khyentse-yeshe", "suffix" => "jpg", "class" => "masters"))
 	);
 ?>

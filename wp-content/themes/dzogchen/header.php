@@ -85,8 +85,16 @@
 				}
 			} else {
 				$thisID = $post->ID;
-				$parentID = get_page($hierPageID)->post_parent;
-				$pageId = ($parentID == NULL) ? $thisID : $parentID;
+				switch($thisID){
+					case 13: // yeshe
+					case 1372: // kunkyabling		
+					case 89: // phendeling
+						$pageId = $thisID;
+					break;
+					default:
+						$parentID = get_page($hierPageID)->post_parent;
+						$pageId = ($parentID == NULL) ? $thisID : $parentID;
+				}
 				$mappingObj = $pageMappings[$pageId];
 				$image = $mappingObj->getImage();
 				$mapping = $mappingObj;
