@@ -58,7 +58,8 @@ div#head-menu div.menu ul li.page-item-5 a{display: block; margin-left: 24px; ma
 div.filter{height:72px;background-color:rgba(255,255,255,0.5); position:absolute; bottom:0px; z-index:20; font-size:24px; }
 div.filter a{color:#152863;}
 div.filter span,div.filter h1 {margin:12px; display:block;}
-div.filter span{line-height:24px; }
+div.filter span{line-height:24px;}
+div.filter.homepage{display:none;}
 div.filter.masters{border-left-color:#102269;}
 div.filter.teaching{border-left-color:#ED1C24;}
 div.filter.community{border-left-color:#FFDE00;}

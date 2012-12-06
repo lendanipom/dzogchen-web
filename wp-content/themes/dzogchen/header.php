@@ -67,7 +67,7 @@
 			<div class="links">
 				<a href="<?php echo get_permalink(5) ?>" class="home"></a>
 				<span class="masters">Učitelé</span>
-				<span class="teaching">Nauka</span>
+				<span class="teaching">Cesta</span>
 				<span class="community">Komunita</span>
 			</div>
 			<?php wp_page_menu(); /* that div has class menu */ ?> 
@@ -111,7 +111,9 @@
 		"/>
 		<?
 			}
+			if(($post->ID != 5)){
 		?>
 		<div class="filter <?php echo $mapping->getClass(); ?>"></div>
+			<?php } ?>
 	</div>
 

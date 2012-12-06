@@ -64,7 +64,7 @@
 	<?php 
 		$cols = array(
 			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé", "tag_id" => 36),
-			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe", "tag_id" => 37),
+			array("class" => "teaching", "tag" => "Cesta", "label" => "Cesta", "tag_id" => 37),
 			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa", "tag_id" => 38),
 			array("label" => "Kalendář české komunity")
 		);
