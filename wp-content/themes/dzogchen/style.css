@@ -24,7 +24,7 @@ body{font-family: "Times New Roman"; position:relative; color: #152863; font-siz
 a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
 strong{font-weight:bold;}
-h3{font-size:16px; font-weight:bold; padding-bottom:16px;}
+h3{font-size:16px; font-weight:bold; padding-bottom:16px; padding-top:10px;}
 
 
 /* menu - the top gradient three stripes image with rolldown menu */
@@ -135,6 +135,6 @@ div#right-articles a{font-size:16px;}
 div#right-articles ul{margin-left:12px; margin-bottom:12px;}
 div#right-articles li{margin-top:12px;}
 div#right-articles h2{font-size:24px;background-image:url("./images/dark-blue-to-light-blue-stripe.png"); background-repeat:repeat-y; background-position: left top; color:white; height: 22px; padding-top:8px; padding-bottom:6px; padding-left:12px; background-size: 100% auto;}
-div#right-articles h3{padding-bottom:0px; font-weight:normal;}
+div#right-articles h3{padding-bottom:0px; font-weight:normal;padding-top:0px;}
 
 
