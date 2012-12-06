@@ -24,6 +24,7 @@ body{font-family: "Times New Roman"; position:relative; color: #152863; font-siz
 a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
 strong{font-weight:bold;}
+h3{font-size:16px; font-weight:bold; padding-bottom:16px;}
 
 
 /* menu - the top gradient three stripes image with rolldown menu */
