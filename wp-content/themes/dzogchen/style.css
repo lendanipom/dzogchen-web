@@ -116,7 +116,8 @@ div#footer p span.right{position:absolute; right:0px; padding-right:12px;}
 
 
 /* article */
-div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px; line-height:16px; min-height:600px;}
+div#article-content {width:576px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: right top; margin-top:12px; padding-right:12px; position:relative; padding-bottom:30px; line-height:16px; float:left; left:3px; min-height:300px;}
+div#article-content div#border-collapse-container {position:relative; left:-3px;}
 div#article-content p {margin-bottom:1.25em;}
 div#article-plus-newest-articles{position:relative;}
 div#article-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px; width:900px;}
@@ -127,7 +128,7 @@ div#article-content.post .postedon a{font-size:16px; margin-bottom:2px;}
 
 
 /* newest articles right side pane */
-div#right-articles {width:362px;position:absolute; right:0px; top:0px;}
+div#right-articles {width:360px; padding-left:12px; float:left; margin-top:12px; background-image:url("./images/blue-red-yellow-vertical-stripe.png"); background-repeat:repeat-y; background-position: left top;}
 div#right-articles a{font-size:16px;}
 div#right-articles ul{margin-left:12px; margin-bottom:12px;}
 div#right-articles li{margin-top:12px;}
