@@ -37,25 +37,16 @@ div#head-menu div.links .teaching{left:576px; }
 div#head-menu div.links .community{left:768px; }
 div#head-menu div.links .home{left:19px; width:300px; top:0px; height:70px; display:block;}
 div#head-menu div.mouse-area{position:relative;}
-div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; display:none; z-index:21}
+div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; z-index:21}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
-div#head-menu div.menu ul li {max-width:192px;}
+div#head-menu div.menu ul li {width:192px; float:left; margin-bottom:12px;}
 div#head-menu div.menu ul{list-style-type:none;}
 /* hide the top anchors to virtual pages only serving as nodes to the others */
 div#head-menu div.menu ul li a{display:none;}
 /* show the nested anchors to real pages, override the previous rule */
 div#head-menu div.menu ul li ul li a{display:block;color:#152863; margin-top:2px;}
-div#head-menu div.menu ul li.page-item-5 a{display: block; position:absolute; left: 24px; top:12px;color:#152863;}
-
-/* the longest item, which will probably be community must be non-absolute, so the engine can compute the height of the div */
-/* for member column */
-div#head-menu div.menu ul li.page-item-409{position:absolute; left:192px; top:0px;} 
-/* masters column */
-div#head-menu div.menu ul li.page-item-1324{position:absolute; left:384px;} 
-/* teaching column */
-div#head-menu div.menu ul li.page-item-1329{position:absolute; left:576px;} 
-/* community column */
-div#head-menu div.menu ul li.page-item-71{position:relative; left:768px;} 
+div#head-menu div.menu ul li ul li{margin-bottom:0px;}
+div#head-menu div.menu ul li.page-item-5 a{display: block; margin-left: 24px; margin-top:12px;color:#152863;}
 
 
 /* transparency stripe */

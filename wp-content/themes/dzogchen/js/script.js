@@ -10,7 +10,7 @@ var dzogchen = (function($){
 			if(isMenuOpen()){
 				menu.show();
 			} else {
-				menu.hide();
+	//			menu.hide();
 			}
 		}
 		function toggleMenuOpen(){
@@ -33,5 +33,4 @@ var dzogchen = (function($){
 	});
 	return dzogchen;
 }(jQuery));
-
 
