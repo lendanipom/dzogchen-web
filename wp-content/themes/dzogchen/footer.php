@@ -15,6 +15,7 @@
 	<p><span>Dzogčhen o.s. &copy; Shangshung institute Italy</span><span class="right"><a href="mailto:dzogchen@dzochen.cz">dzogchen@dzochen.cz</a> Opletalova 35, Praha 2</span></p>	
 </div>
 </div><!-- #main-content -->
+</div><!-- #border-conainer -->
 
 <?php
 	/* Always have wp_footer() just before the closing </body>

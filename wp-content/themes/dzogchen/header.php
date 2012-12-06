@@ -57,11 +57,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="main-content">        
-        <div id="head-menu">
 		<div class="topmost-panel">
 			<?php echo do_shortcode("[lwa]"); ?>
 		</div>
+	<div id="border-container">
+    <div id="main-content">        
+        <div id="head-menu">
 		<div class="mouse-area">
 			<div class="links">
 				<a href="<?php echo get_permalink(5) ?>" class="home"></a>

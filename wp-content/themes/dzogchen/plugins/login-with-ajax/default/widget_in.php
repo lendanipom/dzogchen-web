@@ -21,9 +21,6 @@
 		global $wpmu_version;
 		get_currentuserinfo();
 	?>
-	<table cellpadding="0" cellspacing="0" width="100%">
-		<tr>
-			<td id="LoginWithAjax_Info">
 				<?php
 					//Admin URL
 					if ( $lwa_data['profile_link'] == '1' ) {
@@ -38,9 +35,6 @@
 						<?php
 					}
 				?>
-			</td>
-		</tr>
-	</table>
 </div>
 <?php
 	if( $is_widget ){

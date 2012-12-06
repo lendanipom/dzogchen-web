@@ -1,5 +1,4 @@
 @charset "utf-8";
-div#LoginWithAjax{ position:absolute; right:0px; top:0px; }
 #LoginWithAjax_Form label{display:none; }
 #LoginWithAjax_Form input#lwa_rememberme{display:none; }
 #wp-logout {position:relative; bottom:-5px;}
