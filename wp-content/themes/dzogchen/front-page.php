@@ -65,9 +65,18 @@
 		$cols = array(
 			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé", "tag_id" => 36),
 			array("class" => "teaching", "tag" => "Nauka", "label" => "Nauka a praxe", "tag_id" => 37),
-			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa", "tag_id" => 38)
+			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa", "tag_id" => 38),
+			array("label" => "Kalendář české komunity")
 		);
-		for($i = 0; $i < count($cols); ++$i){
+		for($i = count($cols) -1; $i >= 0; --$i){
+			?>
+				<div class="container <?php $v = $cols[$i]['class']; echo ($v == NULL ? "" : "container-$v") ?>">
+				<div class="filter">
+					<span><br/> <?php echo $cols[$i]['label'] ?> </span>
+				</div>
+			<?php
+		}
+		for($i = 0; $i < count($cols) - 1; ++$i){
 			?>
 			<div class="small <?php echo $cols[$i]['class'] ?>">
 				<div class="content">
@@ -75,21 +84,22 @@
 						<?php echo do_posts_in_column($cols[$i]["tag_id"]) ?>
 					</ul>
 				</div>
-				<div class="filter">
-					<span><br/> <?php echo $cols[$i]['label'] ?> </span>
-				</div>
 			</div>
 			<?php
 		}
+		?>
+			<div class="big">
+				<div class="content">
+					<?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="5"]'); ?>
+				</div>
+			</div>
+		<?php
+		for($i = 0; $i < count($cols); ++$i){ // one more round for calendar
+			?>
+				</div>
+			<?php
+		}
 	?>
-	<div class="big">
-		<div class="content">
-			<?php echo do_shortcode('[google-calendar-events id="1, 2" type="list" title="Events on" max="5"]'); ?>
-		</div>
-		<div class="filter">
-			<span><br/>Kalendář české komunity</span>
-		</div>
-	</div>
 </div>
 <?php get_footer(); ?>
 
