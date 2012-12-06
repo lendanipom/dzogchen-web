@@ -39,7 +39,8 @@ div#head-menu div.links .home{left:19px; width:300px; top:0px; height:70px; disp
 div#head-menu div.mouse-area{position:relative;}
 div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; z-index:21; display:none;}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
-div#head-menu div.menu ul li {width:192px; float:left; margin-bottom:12px;}
+div#head-menu div.menu ul li {width:192px; float:right; margin-bottom:12px;}
+div#head-menu div.menu ul li.page-item-5 {float:left;}
 div#head-menu div.menu ul{list-style-type:none;}
 /* hide the top anchors to virtual pages only serving as nodes to the others */
 div#head-menu div.menu ul li a{display:none;}
