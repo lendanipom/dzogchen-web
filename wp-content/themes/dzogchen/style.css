@@ -121,8 +121,8 @@ div#footer p span.right{position:absolute; right:0px; padding-right:12px;}
 
 
 /* article + members */
-.main-content {position:relative; margin-top:12px;}
-.main-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px; width:900px; min-height:300px;padding-bottom:30px; line-height:16px;}
+.main-content {position:relative; margin-top:12px;min-height:300px;}
+.main-content h1{position:absolute; top:-48px; font-size:24px; z-index:50; left:24px; width:900px; padding-bottom:30px; line-height:16px;}
 .main-content td{padding-left:3px;padding-right:3px;padding-top:1px;padding-top:1px;}
 
 
