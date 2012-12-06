@@ -25,6 +25,9 @@ a, a:visited{color:#00aeef; text-decoration:underline;}
 div#main-content{ width:960px; margin:0px auto }
 strong{font-weight:bold;}
 h3{font-size:16px; font-weight:bold; padding-bottom:16px; padding-top:10px;}
+table{border-collapse:collapse}
+thead th{font-weight:bold;}
+td, th {border:1px solid gray;}
 
 
 /* menu - the top gradient three stripes image with rolldown menu */
@@ -123,9 +126,7 @@ div#footer p span.right{position:absolute; right:0px; padding-right:12px;}
 
 
 /* members */
-table#contacts-table{border-collapse:collapse;width:100%}
-#contacts-table thead th{font-weight:bold;}
-#contacts-table td,#contacts-table th {border:1px solid gray;}
+table#contacts-table{width:100%}
 
 
 /* article */
@@ -137,6 +138,7 @@ div#article-content.post p.perex{font-size:18px; font-weight:bold;}
 div#article-content.post .postedon{text-align:right; margin-right:12px;}
 div#article-content.post .postedon span, div#article-content.post .postedon a{display:block;}
 div#article-content.post .postedon a{font-size:16px; margin-bottom:2px;}
+div#article-content td{padding-left:3px;padding-right:3px;padding-top:1px;padding-top:1px;}
 
 
 /* newest articles right side pane */
