@@ -1,29 +1,24 @@
 server {
-    #if ($host ~* ^www\.(.*)) {
-     #   set $host_without_www $1;
-      #  rewrite ^/(.*)$ $scheme://$host_without_www/$1 permanent;
-    #}
 
-    # unless the request is for a valid file, send to bootstrap
-    if (!-e $request_filename) {
-        rewrite ^(.+)$ /index.php?q=$1 last;
-    }
+	# unless the request is for a valid file, send to bootstrap
+	if (!-e $request_filename) {
+		rewrite ^(.+)$ /index.php?q=$1 last;
+	}
 
 	server_name localhost;
 
-	 root /var/www/dzogchen;
-		# root /var/www/olddzogchen;
-	    gzip                    on;
+	root /var/www/dzogchen;
+	gzip on;
 
-	    location / {
-		    index   index.php;
-	    }
-	    location ~ \.php$ {
+	location / {
+		index   index.php;
+	}
+	location ~ \.php$ {
 		fastcgi_pass 127.0.0.1:9000;
 		fastcgi_index index.php;
 		fastcgi_param   SCRIPT_FILENAME /var/www/dzogchen$fastcgi_script_name;
 		fastcgi_param  HTTPS on;
 		include fastcgi_params;
-	    }
+	}
 }
 

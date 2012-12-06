@@ -13,7 +13,7 @@
  */ ?>
 <?php get_header(); ?>
 <div id="article-plus-newest-articles">
-	<div id="article-content" class="post">
+	<div id="article-content" class="post" class="main-content">
 		<div id="border-collapse-container">
 			<?php while (have_posts()) : the_post(); ?>
 				<h1><?php the_title(); ?></h1>

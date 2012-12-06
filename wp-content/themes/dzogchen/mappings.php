@@ -7,14 +7,14 @@
 		public function PageMapping($data){
 			$suffix = ($data["suffix"] != NULL) ? $data["suffix"] : "png";	
 			$name = $data["name"];
-			$this->class = ($data["class"] != NULL) ? $data["class"] : $name;
+			$this->clazz = ($data["clazz"] != NULL) ? $data["clazz"] : $name;
 			$this->image = $name . "." . $suffix;
 		}
 		public function getImage(){
 			return $this->image;
 		}	
 		public function getClass(){
-			return $this->class;
+			return $this->clazz;
 		}
 	}
 	$tagMappings = array(
@@ -25,12 +25,12 @@
 	$pageMappings = array(
 		// in edit of pages in wp-admin, there is the ID of the page in href, so one can find the id there.
 		5 => new PageMapping(array("name" => "first-page-main-image")),
-		409 => new PageMapping(array("name" => "first-page-main-image", "class" => "community")),
+		409 => new PageMapping(array("name" => "first-page-main-image", "clazz" => "community")),
 		1324 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),
 		71 => new PageMapping(array("name" => "community", "suffix" => "jpg")),
 		1329 => new PageMapping(array("name" => "teaching", "suffix" => "jpg")),
-		1372 => new PageMapping(array("name" => "kunkyabling", "suffix" => "jpg", "class" => "community")),
-		89 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "class" => "community")),
-		13 => new PageMapping(array("name" => "khyentse-yeshe", "suffix" => "jpg", "class" => "masters"))
+		1372 => new PageMapping(array("name" => "kunkyabling", "suffix" => "jpg", "clazz" => "community")),
+		89 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "clazz" => "community")),
+		13 => new PageMapping(array("name" => "khyentse-yeshe", "suffix" => "jpg", "clazz" => "masters"))
 	);
 ?>
