@@ -1,8 +1,8 @@
 <div id="right-articles">
 	<?php
-		$name = $post->post_name;
-		$catId = get_cat_ID($name);
 		if($post->post_type == "page"){
+			$name = $post->post_name;
+			$catId = get_cat_ID($name);
 			$args = array(
 				"category" => $catId
 			);
@@ -15,13 +15,17 @@
 			die();
 		}
 	?>
-	<?php if($catId != 0){ ?>
+	<?php 
+		if($catId != 0 || $post->post_type == "post"){ 
+			$args["showposts"] = 5;
+			$args["post__not_in"] = array($post->ID);
+			$relatedPosts = get_posts($args);
+			$arrSize = count($relatedPosts);
+			if($arrSize > 0){
+	?>
 		<h2>Související články</h2>
 		<ul>
 			<?php
-				$args["showposts"] = 5;
-				$args["post__not_in"] = array($post->ID);
-				$relatedPosts = get_posts($args);
 				foreach($relatedPosts as $post) :
 			?>
 			<li>
@@ -31,7 +35,7 @@
 			<?php 
 				endforeach; 
 			?>
-	<?php } ?>
+	<?php } } ?>
 	</ul>
 	<h2>Nejnovější články</h2>
 	<ul>
