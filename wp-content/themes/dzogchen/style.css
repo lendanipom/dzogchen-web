@@ -37,7 +37,7 @@ div#head-menu div.links .teaching{left:576px; }
 div#head-menu div.links .community{left:768px; }
 div#head-menu div.links .home{left:19px; width:300px; top:0px; height:70px; display:block;}
 div#head-menu div.mouse-area{position:relative;}
-div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; z-index:21 display:none;}
+div#head-menu div.menu{position:absolute; top:70px; background-color:white; width:960px; z-index:21; display:none;}
 div#head-menu div.menu ul li ul.children{padding-top:12px;padding-bottom:12px; width:192px; }
 div#head-menu div.menu ul li {width:192px; float:left; margin-bottom:12px;}
 div#head-menu div.menu ul{list-style-type:none;}
