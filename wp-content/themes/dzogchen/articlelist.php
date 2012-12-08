@@ -4,6 +4,15 @@
 		 * Pages has meta fields related_categories and related_tags, which contains comma separated ids, those are used to provide related articles
 		 */
 		$taxonomy_values = array_merge(get_post_meta($post->ID, "related_tag", false),get_post_meta($post->ID, "related_category", false));
+		if($post->post_type == "post"){
+			$the_tags = get_the_tags($post->ID);
+			$i = 0;
+			foreach($the_tags as $key => $val){
+				$arr_tags[$i] = $key;
+				$i++;
+			}
+			$taxonomy_values = array_merge($taxonomy_values, $arr_tags);
+		}
 		if(count($taxonomy_values) > 0){
 			global $wpdb;
 			$taxonomy_query = $taxonomy_values[0];
