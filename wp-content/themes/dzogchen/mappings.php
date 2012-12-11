@@ -26,7 +26,7 @@
 	// in edit of pages in wp-admin, there is the ID of the page in href, so one can find the id there.
 	$pageMappings = array(
 		409 => new PageMapping(array("name" => "first-page-main-image", "suffix" => "png")),		
-		71 => new PageMapping(array("name" => "asia-onlus", "suffix" => "jpg", "clazz" => "community")),
+		83 => new PageMapping(array("name" => "asia-onlus", "suffix" => "jpg", "clazz" => "community")),
 		11 => new PageMapping(array("name" => "lineage-of-masters", "suffix" => "jpg", "clazz" => "masters")),		
 		9 => new PageMapping(array("name" => "chogyal-namkhai-norbu", "suffix" => "jpg", "clazz" => "masters")),
 		363 => new PageMapping(array("name" => "community-czech", "suffix" => "jpg", "clazz" => "community")),
