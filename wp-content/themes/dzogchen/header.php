@@ -84,19 +84,13 @@
 						break;	
 					}
 				}
+			
 			} else {
 				$thisID = $post->ID;
-				switch($thisID){
-					case 13: // yeshe
-					case 1372: // kunkyabling		
-					case 89: // phendeling
-						$pageId = $thisID;
-					break;
-					default:
-						$parentID = get_page($hierPageID)->post_parent;
-						$pageId = ($parentID == NULL) ? $thisID : $parentID;
+				$mappingObj = $pageMappings[$thisID];
+				if($mappingObj == NULL){
+					$mappingObj = $pageMappings["default"];
 				}
-				$mappingObj = $pageMappings[$pageId];
 				$image = $mappingObj->getImage();
 				$mapping = $mappingObj;
 			}

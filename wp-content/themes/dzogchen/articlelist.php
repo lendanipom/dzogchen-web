@@ -1,10 +1,11 @@
 <div id="right-articles">
 	<?php
 		/**
-		 * Pages has meta fields related_categories and related_tags, which contains comma separated ids, those are used to provide related articles
+		 * Pages has meta fields related_categories and related_tags, which contains array of ids, those are used to provide related articles
 		 */
 		$taxonomy_values = array_merge(get_post_meta($post->ID, "related_tag", false),get_post_meta($post->ID, "related_category", false));
 		if($post->post_type == "post"){
+			// show the pages with similar tags
 			$the_tags = get_the_tags($post->ID);
 			$i = 0;
 			foreach($the_tags as $key => $val){
