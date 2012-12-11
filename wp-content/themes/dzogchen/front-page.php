@@ -49,7 +49,7 @@
 		function do_posts_in_column($column){
 	?>
 			<?php 
-				$query = array("tag_id" => $column, "suppress_filters" => false,"post__in" => get_option("sticky_posts"));
+				$query = array("cat" => $column, "suppress_filters" => false,"post__in" => get_option("sticky_posts"));
 				$res = get_posts($query);
 				foreach($res as $post) :
 			?>
@@ -64,7 +64,7 @@
 	<?php 
 		$cols = array(
 			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé", "tag_id" => 36),
-			array("class" => "teaching", "tag" => "Cesta", "label" => "Cesta", "tag_id" => 37),
+			array("class" => "teaching", "tag" => "Cesta", "label" => "Cesta", "tag_id" => 42),
 			array("class" => "community", "tag" => "Komunita", "label" => "Lidé a místa", "tag_id" => 38),
 			array("label" => "Kalendář české komunity")
 		);
