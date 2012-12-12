@@ -163,65 +163,6 @@ if (!function_exists('dzogchen_admin_header_style')) :
 endif;
 
 /**
- * Sets the post excerpt length to 40 characters.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- *
- * @since Twenty Ten 1.0
- * @return int
- */
-function dzogchen_excerpt_length($length) {
-    return 40;
-}
-
-add_filter('excerpt_length', 'dzogchen_excerpt_length');
-
-/**
- * Returns a "Continue Reading" link for excerpts
- *
- * @since Twenty Ten 1.0
- * @return string "Continue Reading" link
- */
-function dzogchen_continue_reading_link() {
-    return ' <a href="' . get_permalink() . '">' . __('více <span class="meta-nav">&rarr;</span>', 'dzogchen') . '</a>';
-}
-
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and dzogchen_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- *
- * @since Twenty Ten 1.0
- * @return string An ellipsis
- */
-function dzogchen_auto_excerpt_more($more) {
-    //return ' &hellip;' . dzogchen_continue_reading_link();
-    return "";
-}
-
-add_filter('excerpt_more', 'dzogchen_auto_excerpt_more');
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- *
- * @since Twenty Ten 1.0
- * @return string Excerpt with a pretty "Continue Reading" link
- */
-function dzogchen_custom_excerpt_more($output) {
-    if (has_excerpt() && !is_attachment()) {
-        $output .= dzogchen_continue_reading_link();
-    }
-    return $output;
-}
-
-add_filter('get_the_excerpt', 'dzogchen_custom_excerpt_more');
-
-/**
  * Remove inline styles printed when the gallery shortcode is used.
  *
  * Galleries are styled by the theme in Twenty Ten's style.css. This is just

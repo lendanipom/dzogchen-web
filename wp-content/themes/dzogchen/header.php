@@ -76,24 +76,15 @@
 	<div id="main-image-container">
 		<?php 
 			if($post->post_type == "post"){
-				$post_tag_ids = wp_get_post_tags($post->ID, array("fields" => "ids"));
-				foreach($post_tag_ids as &$post_tag_id){
-					$mapping = $tagMappings[$post_tag_id];
-					if($mapping != NULL){
-						$image = $mapping->getImage();
-						break;	
-					}
-				}
-			
+				$mapping = $pageMappings["default"];
 			} else {
 				$thisID = $post->ID;
-				$mappingObj = $pageMappings[$thisID];
-				if($mappingObj == NULL){
-					$mappingObj = $pageMappings["default"];
+				$mapping = $pageMappings[$thisID];
+				if($mapping == NULL){
+					$mapping = $pageMappings["default"];
 				}
-				$image = $mappingObj->getImage();
-				$mapping = $mappingObj;
 			}
+			$image = $mapping->getImage();
 			if($image != ""){
 		?>
 		<img id="main-image" width="960" height="386" src="

@@ -13,6 +13,9 @@
  */ ?>
 <?php get_header(); ?>
 <div id="article-plus-newest-articles">
+	<?php 
+		
+	?>
 	<div id="article-content" class="post main-content">
 		<div id="border-collapse-container">
 			<?php while (have_posts()) : the_post(); ?>
@@ -26,6 +29,7 @@
 		</div>
 	</div>
 	<?php get_template_part( "articlelist" ) ?> 
+	<?php ?>
 </div>
 <?php get_footer(); ?>
 

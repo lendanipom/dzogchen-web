@@ -1,67 +1,66 @@
 <div id="right-articles">
+		<!-- mfunc -->
 	<?php
+		$post_id = $post->ID;	
+		$post_not_in = array($post_id);
+		$baseQuery = array(
+			"post__not_in" => $post_not_in,
+			"showposts" => 5
+		); 
 		/**
-		 * Pages has meta fields related_categories and related_tags, which contains array of ids, those are used to provide related articles
+		 * Pages has meta fields related_categories , which contains array of ids, those are used to provide related articles
 		 */
-		$taxonomy_values = array_merge(get_post_meta($post->ID, "related_tag", false),get_post_meta($post->ID, "related_category", false));
-		if($post->post_type == "post"){
+		$taxonomy_values = get_post_meta($post_id, "related_category", false);
+		if($post->post_type == "post") {
 			// show the pages with similar tags
-			$the_tags = get_the_tags($post->ID);
+			$the_categories = get_the_category($post_id);
 			$i = 0;
-			foreach($the_tags as $key => $val){
-				$arr_tags[$i] = $key;
+			foreach($the_categories as $the_category_id){
+				$arr_categories[$i] = $the_category_id->term_id;
 				$i++;
 			}
-			$taxonomy_values = array_merge($taxonomy_values, $arr_tags);
+			$taxonomy_values = array_merge($taxonomy_values, $arr_categories);
 		}
 		if(count($taxonomy_values) > 0){
-			global $wpdb;
-			$taxonomy_query = $taxonomy_values[0];
-			for($i = 0; $i < count($taxonomy_values); ++$i){
-				$taxonomy_query = $taxonomy_query . "," . $taxonomy_values[$i];
+			$query = $baseQuery;
+			$query["category__in"] = $taxonomy_values;
+			if(!is_user_logged_in()){
+				$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
+				$query = array_merge($query, $additional);
 			}
-			$post_ids = $wpdb->get_col( $wpdb->prepare( "
-				SELECT ID
-				FROM $wpdb->posts
-				JOIN $wpdb->term_relationships on (ID = object_id)
-				WHERE post_type = 'post'
-				AND term_taxonomy_id IN ( $taxonomy_query )
-				AND ID <> $post->ID
-				ORDER BY post_date
-				LIMIT 0,5;
-			" ) );
-			if(count($post_ids) > 0){
-				$query_args = array( 'post__in' => $post_ids ); 
-				$related_posts = get_posts($query_args);
+			$related_posts = get_posts($query);
+			if(count($related_posts) > 0){
 	?>
 		<h2>Související články</h2>
 		<ul>
 			<?php
-				foreach($related_posts as $post) :
+				$exclude_from_newest = $post_not_in;
+				foreach($related_posts as $postVar) :
+				array_push($exclude_from_newest, $postVar->ID);
 			?>
-			<li>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<span class="published"><?php echo get_the_date('j.n.Y'); ?></span>
-			</li>
+			    <li><a href="<?php echo get_permalink($postVar->ID); ?>"><?php echo $postVar->post_title; ?></a>
+			    <span class="published"><?php echo get_the_time('j.n.Y', $postVar); ?></span></li>
 			<?php 
 				endforeach; 
 			?>
-	<?php } } ?>
+	<?php } } 
+		$query = $baseQuery;
+		$query['post__not_in'] = $exclude_from_newest;
+		$newest = get_posts($query);
+		if(count($newest) > 0){
+	?>
 	</ul>
 	<h2>Nejnovější články</h2>
 	<ul>
 		<?php
-			$argsNewest["showposts"] = 5;
-			$argsNewest["post__not_in"] = array($post->ID);
-			$newest = get_posts($argsNewest);
-			foreach($newest as $post) :
-		?>
-		<li>
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<span class="published"><?php echo get_the_date('j.n.Y'); ?></span>
-		</li>
-		<?php 
-			endforeach; 
-		?>
+				foreach($newest as $postVar) :
+			?>
+			    <li><a href="<?php echo get_permalink($postVar->ID); ?>"><?php echo $postVar->post_title; ?></a>
+			    <span class="published"><?php echo get_the_time('j.n.Y', $postVar); ?></span></li>
+			<?php 
+				endforeach; 
+			?>
 	</ul>
+	<?php } ?>
+		<!-- /mfunc -->
 </div>

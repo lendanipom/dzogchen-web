@@ -17,11 +17,6 @@
 			return $this->clazz;
 		}
 	}
-	$tagMappings = array(
-		36 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),
-		37 => new PageMapping(array("name" => "teaching", "suffix" => "jpg")),
-		38 => new PageMapping(array("name" => "community", "suffix" => "jpg"))
-	);
 
 	// in edit of pages in wp-admin, there is the ID of the page in href, so one can find the id there.
 	$pageMappings = array(
@@ -46,17 +41,4 @@
 		"default" => new PageMapping(array("name" => "texts", "suffix" => "jpg", "clazz" => "teaching"))
 	);
 
-		// chybi
-		// home, vajra dance, kategorie, kalendare mistru, kunkyabling, odkazy
-		// zmizel webcast
-		//=> new PageMapping(array("name" => "headers/webcast", "suffix" => "jpg")),
-
-		///5 => new PageMapping(array("name" => "first-page-main-image")),
-		
-		//1324 => new PageMapping(array("name" => "masters", "suffix" => "jpg")),
-		//71 => new PageMapping(array("name" => "community", "suffix" => "jpg")),
-		//1329 => new PageMapping(array("name" => "teaching", "suffix" => "jpg")),
-		//1372 => new PageMapping(array("name" => "kunkyabling", "suffix" => "jpg", "clazz" => "community")),
-		//89 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "clazz" => "community")),
-		//13 => new PageMapping(array("name" => "khyentse-yeshe", "suffix" => "jpg", "clazz" => "masters"))
 ?>
