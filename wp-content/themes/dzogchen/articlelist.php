@@ -7,6 +7,10 @@
 			"post__not_in" => $post_not_in,
 			"showposts" => 5
 		); 
+		if(!is_user_logged_in()){
+			$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
+			$baseQuery = array_merge($baseQuery, $additional);
+		}
 		/**
 		 * Pages has meta fields related_categories , which contains array of ids, those are used to provide related articles
 		 */
@@ -24,10 +28,6 @@
 		if(count($taxonomy_values) > 0){
 			$query = $baseQuery;
 			$query["category__in"] = $taxonomy_values;
-			if(!is_user_logged_in()){
-				$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
-				$query = array_merge($query, $additional);
-			}
 			$related_posts = get_posts($query);
 			if(count($related_posts) > 0){
 	?>
