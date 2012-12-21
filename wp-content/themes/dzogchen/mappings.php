@@ -28,6 +28,7 @@
 		73 => new PageMapping(array("name" => "community-membership", "suffix" => "jpg", "clazz" => "community")),
 		552 => new PageMapping(array("name" => "community-wolrd", "suffix" => "jpg", "clazz" => "community")),
 		49 => new PageMapping(array("name" => "how-to-start-dzogchen", "suffix" => "jpg", "clazz" => "teaching")),
+		315 => new PageMapping(array("name" => "what-is-dzogchen", "clazz" => "teaching")),
 		
 		77 => new PageMapping(array("name" => "losar", "suffix" => "jpg", "clazz" => "community")),
 		964 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "clazz" => "community")),
