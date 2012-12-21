@@ -45,12 +45,12 @@
 	</div>
 </div>
 <div id="front-articles">
-		<!-- mfunc -->
+	<!-- mfunc $res -->
 	<?php 
 		function do_posts_in_column($column){
 	?>
 			<?php 
-				$query = array("cat" => $column, "suppress_filters" => false,"post__in" => get_option("sticky_posts"));
+				$query = array("cat" => $column, "suppress_filters" => true,"post__in" => get_option("sticky_posts"));
 				if(!is_user_logged_in()){
 					$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
 					$query = array_merge($query, $additional);
@@ -66,6 +66,7 @@
 	<?php
 		}
 	?>
+	<!-- /mfunc -->
 	<?php 
 		$cols = array(
 			array("class" => "masters", "tag" => "Učitelé", "label" => "Učitelé", "tag_id" => 36),
@@ -105,7 +106,6 @@
 			<?php
 		}
 	?>
-		<!-- /mfunc -->
 </div>
 <?php get_footer(); ?>
 

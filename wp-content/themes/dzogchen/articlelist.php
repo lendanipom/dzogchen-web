@@ -1,5 +1,5 @@
 <div id="right-articles">
-		<!-- mfunc -->
+	<!-- mfunc $related_posts -->
 	<?php
 		$post_id = $post->ID;	
 		$post_not_in = array($post_id);
@@ -43,6 +43,8 @@
 			<?php 
 				endforeach; 
 			?>
+	<!-- /mfunc -->
+	<!-- mfunc $newest -->
 	<?php } } 
 		$query = $baseQuery;
 		$query['post__not_in'] = $exclude_from_newest;
@@ -62,5 +64,5 @@
 			?>
 	</ul>
 	<?php } ?>
-		<!-- /mfunc -->
+	<!-- /mfunc -->
 </div>
