@@ -50,7 +50,7 @@
 		function do_posts_in_column($column){
 	?>
 			<?php 
-				$query = array("cat" => $column, "suppress_filters" => true,"post__in" => get_option("sticky_posts"));
+				$query = array("cat" => $column, "suppress_filters" => true);
 				if(!is_user_logged_in()){
 					$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
 					$query = array_merge($query, $additional);
@@ -60,7 +60,7 @@
 			?>
 			    <li><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a>
 			    <span class="published"><?php echo get_the_time('j.n.Y', $post); ?></span></li>
-			<?php 
+			<?php
 				endforeach; 
 			?>
 	<?php
