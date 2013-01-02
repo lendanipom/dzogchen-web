@@ -24,11 +24,12 @@
 		83 => new PageMapping(array("name" => "asia-onlus", "suffix" => "jpg", "clazz" => "community")),
 		11 => new PageMapping(array("name" => "lineage-of-masters", "suffix" => "jpg", "clazz" => "masters")),		
 		9 => new PageMapping(array("name" => "chogyal-namkhai-norbu", "suffix" => "jpg", "clazz" => "masters")),
-		363 => new PageMapping(array("name" => "community-czech", "suffix" => "jpg", "clazz" => "community")),
-		73 => new PageMapping(array("name" => "community-membership", "suffix" => "jpg", "clazz" => "community")),
+		363 => new PageMapping(array("name" => "co-je-komunita-dzogchenu", "suffix" => "jpg", "clazz" => "community")),
+		73 => new PageMapping(array("name" => "informace-o-clenstvi", "suffix" => "jpg", "clazz" => "community")),
 		552 => new PageMapping(array("name" => "community-wolrd", "suffix" => "jpg", "clazz" => "community")),
 		49 => new PageMapping(array("name" => "how-to-start-dzogchen", "suffix" => "jpg", "clazz" => "teaching")),
 		315 => new PageMapping(array("name" => "what-is-dzogchen", "clazz" => "teaching")),
+		43 => new PageMapping(array("name" => "vajra-dance", "suffix" => "jpg", "clazz" => "teaching")),
 		
 		77 => new PageMapping(array("name" => "losar", "suffix" => "jpg", "clazz" => "community")),
 		964 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "clazz" => "community")),
@@ -39,6 +40,7 @@
 		1372 => new PageMapping(array("name" => "kunkyabling", "suffix" => "jpg", "clazz" => "community")),
 		89 => new PageMapping(array("name" => "phendeling", "suffix" => "jpg", "clazz" => "community")),
 		13 => new PageMapping(array("name" => "yeshi-namkhai", "suffix" => "jpg", "clazz" => "masters")),
+		5 => new PageMapping(array("name" => "homepage", "suffix" => "jpg", "clazz" => "masters")),
 		"default" => new PageMapping(array("name" => "texts", "suffix" => "jpg", "clazz" => "teaching"))
 	);
 
