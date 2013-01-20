@@ -51,10 +51,12 @@
 	?>
 			<?php 
 				$query = array("cat" => $column, "suppress_filters" => true);
+				/*
 				if(!is_user_logged_in()){
 					$additional = array("meta_key" => "rcUserLevel", "meta_value" => "None");
 					$query = array_merge($query, $additional);
 				}
+				*/
 				$res = get_posts($query);
 				foreach($res as $post) :
 			?>
