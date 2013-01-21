@@ -59,6 +59,7 @@ jQuery(document).ready( function($) {
 			}else{
 				//Login Failed
 				//If there already is an error element, replace text contents, otherwise create a new one and insert it
+/*
 				if( $('#'+statusElement).length > 0 ){
 					$('#'+statusElement).attr('class','invalid').html(data.error);
 				}else{
@@ -69,6 +70,7 @@ jQuery(document).ready( function($) {
 					event.preventDefault();
 					$('#LoginWithAjax_Remember').show('slow');
 				});
+*/
 			}
 		}else{	
 			//If there already is an error element, replace text contents, otherwise create a new one and insert it
