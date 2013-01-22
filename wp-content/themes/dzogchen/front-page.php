@@ -40,7 +40,7 @@
 			?>
 		"/>
 		<div class="filter">
-			<span class="caption"><a href="<?php echo get_permalink(13); ?>">Khjence Ješe Namkhai</a></span>
+			<span class="caption"><a href="<?php echo get_permalink(13); ?>">Khyentse Yeshe Namkhai</a></span>
 		</div>
 	</div>
 </div>
